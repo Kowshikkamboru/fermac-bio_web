@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     // TODO: integrate with email provider or CRM here.
     // For now, we simply echo received data and respond OK.
     return NextResponse.json({ message: 'Message received' }, { status: 200 });
-  } catch (err) {
+  } catch {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
   }
 }

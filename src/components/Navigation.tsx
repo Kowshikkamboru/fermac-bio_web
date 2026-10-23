@@ -1,45 +1,21 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
+const routeMap: Record<string, string> = {
+  '/': 'home',
+  '/about': 'about',
+  '/products': 'products',
+  '/directors': 'directors',
+  '/contact': 'contact',
+};
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState<string>('home');
   const pathname = usePathname();
-
-  useEffect(() => {
-    const routeMap: Record<string, string> = {
-      '/': 'home',
-      '/about': 'about',
-      '/products': 'products',
-      '/directors': 'directors',
-      '/contact': 'contact',
-    };
-
-    const fromPath = routeMap[pathname || '/'] || 'home';
-
-    // prefer hash when present (in-page anchors)
-    let current = fromPath;
-    if (typeof window !== 'undefined' && window.location.hash) {
-      const h = window.location.hash.replace('#', '');
-      if (h) current = h;
-    }
-
-    setActive(current);
-
-    const onHash = () => {
-      if (typeof window !== 'undefined') {
-        const h = window.location.hash.replace('#', '');
-        if (h) setActive(h);
-      }
-    };
-
-    window.addEventListener('hashchange', onHash);
-    return () => window.removeEventListener('hashchange', onHash);
-  }, [pathname]);
+  const active = routeMap[pathname || '/'] || 'home';
 
   return (
     <nav className="fixed top-0 left-0 right-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-md border-b">
@@ -81,7 +57,6 @@ export default function Navigation() {
             <div className="flex items-center space-x-8">
               <Link
                 href="/"
-                onClick={() => setActive('home')}
                 aria-current={active === 'home' ? 'page' : undefined}
                 className={`uppercase tracking-wider pb-1 transition-colors duration-200 ${
                   active === 'home' ? 'text-[#002F3C] border-b-2 border-[#00BEDB]' : 'text-[#626262] hover:text-[#002F3C]'
@@ -92,7 +67,6 @@ export default function Navigation() {
               </Link>
               <Link
                 href="/about"
-                onClick={() => setActive('about')}
                 aria-current={active === 'about' ? 'page' : undefined}
                 className={`uppercase tracking-wider pb-1 transition-colors duration-200 ${
                   active === 'about' ? 'text-[#002F3C] border-b-2 border-[#00BEDB]' : 'text-[#626262] hover:text-[#002F3C]'
@@ -103,7 +77,6 @@ export default function Navigation() {
               </Link>
               <Link
                 href="/products"
-                onClick={() => setActive('products')}
                 aria-current={active === 'products' ? 'page' : undefined}
                 className={`uppercase tracking-wider pb-1 transition-colors duration-200 ${
                   active === 'products' ? 'text-[#002F3C] border-b-2 border-[#00BEDB]' : 'text-[#626262] hover:text-[#002F3C]'
@@ -114,7 +87,6 @@ export default function Navigation() {
               </Link>
               <Link
                 href="/directors"
-                onClick={() => setActive('directors')}
                 aria-current={active === 'directors' ? 'page' : undefined}
                 className={`uppercase tracking-wider pb-1 transition-colors duration-200 ${
                   active === 'directors' ? 'text-[#002F3C] border-b-2 border-[#00BEDB]' : 'text-[#626262] hover:text-[#002F3C]'
@@ -125,7 +97,6 @@ export default function Navigation() {
               </Link>
               <Link
                 href="/contact"
-                onClick={() => setActive('contact')}
                 aria-current={active === 'contact' ? 'page' : undefined}
                 className={`uppercase tracking-wider pb-1 transition-colors duration-200 ${
                   active === 'contact' ? 'text-[#002F3C] border-b-2 border-[#00BEDB]' : 'text-[#626262] hover:text-[#002F3C]'
@@ -158,7 +129,7 @@ export default function Navigation() {
           <nav className="flex flex-col divide-y">
             <Link
               href="/"
-              onClick={() => { setActive('home'); setOpen(false); }}
+              onClick={() => setOpen(false)}
               aria-current={active === 'home' ? 'page' : undefined}
               className={`py-3 text-center uppercase ${active === 'home' ? 'text-[#002F3C] font-semibold' : 'text-[#626262] font-medium'}`}
               style={{ fontFamily: '"Readex Pro", sans-serif', fontWeight: 550, fontSize: '18px' }}
@@ -167,7 +138,7 @@ export default function Navigation() {
             </Link>
             <Link
               href="/about"
-              onClick={() => { setActive('about'); setOpen(false); }}
+              onClick={() => setOpen(false)}
               aria-current={active === 'about' ? 'page' : undefined}
               className={`py-3 text-center uppercase ${active === 'about' ? 'text-[#002F3C] font-semibold' : 'text-[#626262] font-medium'}`}
               style={{ fontFamily: '"Readex Pro", sans-serif', fontWeight: 550, fontSize: '18px' }}
@@ -176,7 +147,7 @@ export default function Navigation() {
             </Link>
             <Link
               href="/products"
-              onClick={() => { setActive('products'); setOpen(false); }}
+              onClick={() => setOpen(false)}
               aria-current={active === 'products' ? 'page' : undefined}
               className={`py-3 text-center uppercase ${active === 'products' ? 'text-[#002F3C] font-semibold' : 'text-[#626262] font-medium'}`}
               style={{ fontFamily: '"Readex Pro", sans-serif', fontWeight: 550, fontSize: '18px' }}
@@ -185,7 +156,7 @@ export default function Navigation() {
             </Link>
             <Link
               href="/directors"
-              onClick={() => { setActive('directors'); setOpen(false); }}
+              onClick={() => setOpen(false)}
               aria-current={active === 'directors' ? 'page' : undefined}
               className={`py-3 text-center uppercase ${active === 'directors' ? 'text-[#002F3C] font-semibold' : 'text-[#626262] font-medium'}`}
               style={{ fontFamily: '"Readex Pro", sans-serif', fontWeight: 550, fontSize: '18px' }}
@@ -194,7 +165,7 @@ export default function Navigation() {
             </Link>
             <Link
               href="/contact"
-              onClick={() => { setActive('contact'); setOpen(false); }}
+              onClick={() => setOpen(false)}
               aria-current={active === 'contact' ? 'page' : undefined}
               className={`py-3 text-center uppercase ${active === 'contact' ? 'text-[#002F3C] font-semibold' : 'text-[#626262] font-medium'}`}
               style={{ fontFamily: '"Readex Pro", sans-serif', fontWeight: 550, fontSize: '18px' }}

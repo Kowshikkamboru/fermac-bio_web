@@ -52,9 +52,12 @@ export default function ContactSection() {
         setForm({ firstName: '', lastName: '', email: '', company: '', subject: '', message: '' });
         setErrors({});
       } else {
-        setStatusMessage((data && (data as any).error) || 'Unable to send message.');
+        const errorMsg = data && typeof data === 'object' && 'error' in data && typeof (data as { error?: unknown }).error === 'string'
+          ? (data as { error: string }).error
+          : 'Unable to send message.';
+        setStatusMessage(errorMsg);
       }
-    } catch (err) {
+    } catch {
       setStatusMessage('Network error. Please try again later.');
     } finally {
       setSubmitting(false);
@@ -146,31 +149,37 @@ export default function ContactSection() {
                     <div>
                       <label className="block text-sm md:text-base mb-1">First Name *</label>
                       <input value={form.firstName} onChange={(e)=>setForm({...form, firstName: e.target.value})} className="w-full rounded-md border border-white/30 bg-transparent px-3 md:px-3 py-2 md:py-2 placeholder-white/60 outline-none text-sm md:text-base" placeholder="Enter your First Name" />
+                      {errors.firstName && <span className="text-red-300 text-xs mt-1 block">{errors.firstName}</span>}
                     </div>
                     <div>
                       <label className="block text-sm md:text-base mb-1">Last Name *</label>
                       <input value={form.lastName} onChange={(e)=>setForm({...form, lastName: e.target.value})} className="w-full rounded-md border border-white/30 bg-transparent px-3 md:px-3 py-2 md:py-2 placeholder-white/60 outline-none text-sm md:text-base" placeholder="Enter your Last Name" />
+                      {errors.lastName && <span className="text-red-300 text-xs mt-1 block">{errors.lastName}</span>}
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-sm md:text-base mb-1">Email Address *</label>
                     <input type="email" value={form.email} onChange={(e)=>setForm({...form, email: e.target.value})} className="w-full rounded-md border border-white/30 bg-transparent px-3 md:px-3 py-2 md:py-2 placeholder-white/60 outline-none text-sm md:text-base" placeholder="Enter your Email" />
+                    {errors.email && <span className="text-red-300 text-xs mt-1 block">{errors.email}</span>}
                   </div>
 
                   <div>
                     <label className="block text-sm md:text-base mb-1">Company *</label>
                     <input value={form.company} onChange={(e)=>setForm({...form, company: e.target.value})} className="w-full rounded-md border border-white/30 bg-transparent px-3 md:px-3 py-2 md:py-2 placeholder-white/60 outline-none text-sm md:text-base" placeholder="Enter your Company" />
+                    {errors.company && <span className="text-red-300 text-xs mt-1 block">{errors.company}</span>}
                   </div>
 
                   <div>
                     <label className="block text-sm md:text-base mb-1">Subject *</label>
                     <input value={form.subject} onChange={(e)=>setForm({...form, subject: e.target.value})} className="w-full rounded-md border border-white/30 bg-transparent px-3 md:px-3 py-2 md:py-2 placeholder-white/60 outline-none text-sm md:text-base" placeholder="Enter message Subject" />
+                    {errors.subject && <span className="text-red-300 text-xs mt-1 block">{errors.subject}</span>}
                   </div>
 
                   <div>
                     <label className="block text-sm md:text-base mb-1">Message *</label>
                     <textarea value={form.message} onChange={(e)=>setForm({...form, message: e.target.value})} rows={3} className="w-full rounded-md border border-white/30 bg-transparent px-3 md:px-3 py-2 md:py-2 placeholder-white/60 outline-none text-sm md:text-base" placeholder="Enter your message here..." />
+                    {errors.message && <span className="text-red-300 text-xs mt-1 block">{errors.message}</span>}
                   </div>
 
                   <div>
