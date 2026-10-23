@@ -70,3 +70,20 @@ body {
   }
 }
 
+/* Custom Microscope & Bacteria Cursor styles */
+@media (pointer: fine) {
+  body.microscope-cursor-active,
+  body.microscope-cursor-active a,
+  body.microscope-cursor-active button,
+  body.microscope-cursor-active [role="button"],
+  body.microscope-cursor-active select,
+  body.microscope-cursor-active label {
+    cursor: none !important;
+  }
+
+  body.microscope-cursor-active input,
+  body.microscope-cursor-active textarea {
+    cursor: text;
+  }
+}
+
