@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#002F3C] text-white py-6">
-      <div className="max-w-[1400px] mx-auto px-2 sm:px-4 lg:px-6">
+    <footer className="bg-[#002F3C] text-white pt-14 pb-8 border-t border-cyan-950">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 items-start">
           {/* Company Info */}
           <div className="col-span-1">
@@ -22,17 +22,17 @@ export default function Footer() {
                   <span className="text-white text-xl font-bold leading-tight">FERMAC</span>
                   <span className="text-cyan-400 text-xl font-bold leading-tight">BIO</span>
                 </div>
-                <span className="text-gray-300 text-xs mt-1">Miracles of Microbone</span>
+                <span className="text-gray-300 text-xs mt-1">Miracles of Microbes</span>
               </div>
             </div>
             <p className="text-gray-300 text-sm mb-4 leading-normal">
-              Leading Biotechnology Company Specializing In Antibiotics
-              Manufacturing Through Advanced Fermentation Processes.
+              India&rsquo;s first domestic manufacturer of three critical fermentation-based anti-infective APIs: Fusidic Acid, Daptomycin, and Teicoplanin.
             </p>
             <div className="flex space-x-3 mt-2">
               <a
                 href="#"
                 className="w-10 h-10 bg-teal-800 hover:bg-teal-700 rounded-full flex items-center justify-center transition-colors"
+                aria-label="LinkedIn"
               >
                 <Image
                   src="/icons/mage_linkedin.svg"
@@ -44,6 +44,7 @@ export default function Footer() {
               <a
                 href="#"
                 className="w-10 h-10 bg-teal-800 hover:bg-teal-700 rounded-full flex items-center justify-center transition-colors"
+                aria-label="Twitter"
               >
                 <Image
                   src="/icons/icon-park-outline_twitter.svg"
@@ -55,6 +56,7 @@ export default function Footer() {
               <a
                 href="#"
                 className="w-10 h-10 bg-teal-800 hover:bg-teal-700 rounded-full flex items-center justify-center transition-colors"
+                aria-label="Instagram"
               >
                 <Image
                   src="/icons/ri_instagram-fill.svg"
@@ -69,37 +71,46 @@ export default function Footer() {
           {/* Combined Links: Company + Products (single grid column) */}
           <div className="col-span-1">
             <div className="flex flex-col md:flex-row md:space-x-8 items-start">
-              <div className="md:w-2/5">
+              <div className="md:w-1/2">
                 <h3 className="font-bold text-sm md:text-lg mb-4">Company</h3>
                 <ul className="space-y-3">
                   <li>
                     <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/products" className="text-gray-300 hover:text-cyan-400 transition-colors">Our Products</Link>
+                    <Link href="/directors?tab=board" className="text-gray-300 hover:text-cyan-400 transition-colors">Board of Directors</Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Careers</Link>
+                    <Link href="/directors?tab=management" className="text-gray-300 hover:text-cyan-400 transition-colors">Key Management Team</Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">News & Media</Link>
+                    <Link href="/facilities" className="text-gray-300 hover:text-cyan-400 transition-colors">Facilities</Link>
+                  </li>
+                  <li>
+                    <Link href="/sustainability" className="text-gray-300 hover:text-cyan-400 transition-colors">Sustainability (ESG)</Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact Us</Link>
                   </li>
                 </ul>
               </div>
-              <div className="md:w-3/5 mt-6 md:mt-0">
-                <h3 className="font-bold text-sm md:text-lg mb-4">Products & Services</h3>
+              <div className="md:w-1/2 mt-6 md:mt-0">
+                <h3 className="font-bold text-sm md:text-lg mb-4">API Portfolio</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link href="/products" className="text-gray-300 hover:text-cyan-400 transition-colors">Our Products</Link>
+                    <Link href="/products" className="text-gray-300 hover:text-cyan-400 transition-colors">Fusidic Acid / Na Salt</Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Custom Manufacturing</Link>
+                    <Link href="/products" className="text-gray-300 hover:text-cyan-400 transition-colors">Daptomycin (Oct 2027)</Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Quality Assurance</Link>
+                    <Link href="/products" className="text-gray-300 hover:text-cyan-400 transition-colors">Teicoplanin (FY29 Launch)</Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Research & Development</Link>
+                    <Link href="/rnd/api" className="text-gray-300 hover:text-cyan-400 transition-colors">Advanced API R&amp;D</Link>
+                  </li>
+                  <li>
+                    <Link href="/rnd/pics" className="text-gray-300 hover:text-cyan-400 transition-colors">Lab &amp; Plant PICS</Link>
                   </li>
                 </ul>
               </div>
@@ -119,8 +130,9 @@ export default function Footer() {
                   />
                 </div>
                 <div className="text-sm">
-                  Main: <a href="tel:+914024242999" className="no-underline">+91 40 2424 2999</a><br />
-                  Sales & Support: <a href="tel:+914099999999" className="no-underline">+91 40 9999 9999</a>
+                  Executive: <a href="tel:+919849499027" className="text-cyan-300 hover:underline">+91 98494 99027</a><br />
+                  Operations: <a href="tel:+919666000728" className="text-cyan-300 hover:underline">+91 96660 00728</a><br />
+                  Office: <a href="tel:+914024242999" className="hover:underline">+91 40 2424 2999</a>
                 </div>
               </li>
               <li className="flex items-start">
@@ -133,9 +145,8 @@ export default function Footer() {
                   />
                 </div>
                 <div className="text-sm">
-                  General: <a href="mailto:info@fermacbio.in" className="no-underline">info@fermacbio.in</a><br />
-                  Sales: <a href="mailto:sales@fermacbio.in" className="no-underline">sales@fermacbio.in</a><br />
-                  Support: <a href="mailto:support@fermacbio.in" className="no-underline">support@fermacbio.in</a>
+                  Commercial: <a href="mailto:sales@fermacbio.in" className="text-cyan-300 hover:underline">sales@fermacbio.in</a><br />
+                  General: <a href="mailto:info@fermacbio.in" className="hover:underline">info@fermacbio.in</a>
                 </div>
               </li>
             </ul>
@@ -159,28 +170,26 @@ export default function Footer() {
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1118 0z" /><circle cx="12" cy="10" r="3" /></svg>
                 </div>
                 <div className="text-xs md:text-sm">
-                  <div className="font-semibold text-white mb-1">Factory & Works</div>
-                  <a href="https://maps.app.goo.gl/bxL38GxmpFgtziTH8" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors block">Survey No. 273 & 274, Usirikapally Village, Shivampet Mandal, Medak(Dt), Hyderabad, Telangana, India, 502334</a>
+                  <div className="font-semibold text-white mb-1">Factory &amp; Works</div>
+                  <a href="https://maps.app.goo.gl/bxL38GxmpFgtziTH8" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors block">Survey No. 273 &amp; 274, Usirikapally Village, Shivampet Mandal, Medak(Dt), Telangana, India, 502334</a>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        
-
         {/* Bottom Bar */}
-        <div className="border-t border-teal-800 pt-3 mt-3">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>© Fermac Bio Private Limited. All Rights Reserved.</p>
-            <div className="flex space-x-6 mt-2 md:mt-0">
-              <Link href="#" className="hover:text-cyan-400 transition-colors">
+        <div className="border-t border-teal-800/80 pt-6 mt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-xs sm:text-sm text-gray-400 gap-4">
+            <p>© {new Date().getFullYear()} Fermac Bio Private Limited. All Rights Reserved.</p>
+            <div className="flex flex-wrap items-center gap-6">
+              <Link href="/privacy" className="hover:text-cyan-400 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-cyan-400 transition-colors">
-                Terms Of Services
+              <Link href="/terms" className="hover:text-cyan-400 transition-colors">
+                Terms of Service
               </Link>
-              <Link href="#" className="hover:text-cyan-400 transition-colors">
+              <Link href="/cookies" className="hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
             </div>
