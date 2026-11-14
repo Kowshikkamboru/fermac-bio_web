@@ -46,6 +46,32 @@ body {
   will-change: transform, opacity;
 }
 
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slideLeft 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 200ms ease-out forwards;
+}
+
 /* Helper classes for staggered delays */
 .animate-delay-0 { animation-delay: 0ms; }
 .animate-delay-50 { animation-delay: 50ms; }

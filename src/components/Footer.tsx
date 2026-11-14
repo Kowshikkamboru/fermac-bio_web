@@ -1,197 +1,258 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
-    <footer className="bg-[#002F3C] text-white pt-14 pb-8 border-t border-cyan-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 items-start">
-          {/* Company Info */}
-          <div className="col-span-1">
-            <div className="flex items-center mb-4">
-              <div className="mr-3">
+    <footer className="relative bg-gradient-to-b from-[#00222b] via-[#001a21] to-[#001318] text-white pt-14 pb-10 border-t border-white/10 overflow-hidden">
+      {/* Subtle top edge highlight */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 max-w-4xl h-px bg-gradient-to-r from-transparent via-[#00BEDB]/30 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Main 4-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 items-start pb-12">
+          {/* Column 1: Brand & Identity (lg:col-span-4) */}
+          <div className="lg:col-span-4 space-y-4">
+            <Link href="/" className="inline-flex items-center group">
+              <div className="mr-3 shrink-0">
                 <Image
                   src="/logo/footer logo 1.svg"
                   alt="FERMAC BIO"
-                  width={48}
-                  height={48}
+                  width={42}
+                  height={42}
+                  className="transition-transform duration-200 group-hover:scale-105"
                 />
               </div>
               <div className="flex flex-col">
-                <div className="flex items-center space-x-2">
-                  <span className="text-white text-xl font-bold leading-tight">FERMAC</span>
-                  <span className="text-cyan-400 text-xl font-bold leading-tight">BIO</span>
+                <div className="flex items-center space-x-1.5">
+                  <span className="text-white text-xl font-bold tracking-wide">FERMAC</span>
+                  <span className="text-[#00BEDB] text-xl font-bold tracking-wide">BIO</span>
                 </div>
-                <span className="text-gray-300 text-xs mt-1">Miracles of Microbes</span>
+                <span className="text-gray-400 text-xs font-medium tracking-wide">Miracles of Microbes</span>
               </div>
-            </div>
-            <p className="text-gray-300 text-sm mb-4 leading-normal">
-              India&rsquo;s first domestic manufacturer of three critical fermentation-based anti-infective APIs: Fusidic Acid, Daptomycin, and Teicoplanin.
+            </Link>
+
+            <p className="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+              India&rsquo;s dedicated domestic manufacturer of three critical fermentation-based anti-infective APIs: Fusidic Acid, Daptomycin, and Teicoplanin. Dedicated to national self-reliance and global healthcare standards.
             </p>
-            <div className="flex space-x-3 mt-2">
+
+            {/* Social Links */}
+            <div className="flex items-center space-x-2.5 pt-1">
               <a
-                href="#"
-                className="w-10 h-10 bg-teal-800 hover:bg-teal-700 rounded-full flex items-center justify-center transition-colors"
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/5 hover:bg-[#00BEDB] text-gray-400 hover:text-[#00222b] rounded-lg border border-white/10 flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5"
                 aria-label="LinkedIn"
               >
-                <Image
-                  src="/icons/mage_linkedin.svg"
-                  alt="LinkedIn"
-                  width={20}
-                  height={20}
-                />
+                <Image src="/icons/mage_linkedin.svg" alt="LinkedIn" width={18} height={18} />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 bg-teal-800 hover:bg-teal-700 rounded-full flex items-center justify-center transition-colors"
-                aria-label="Twitter"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/5 hover:bg-[#00BEDB] text-gray-400 hover:text-[#00222b] rounded-lg border border-white/10 flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5"
+                aria-label="X / Twitter"
               >
-                <Image
-                  src="/icons/icon-park-outline_twitter.svg"
-                  alt="X / Twitter"
-                  width={20}
-                  height={20}
-                />
+                <Image src="/icons/icon-park-outline_twitter.svg" alt="X / Twitter" width={18} height={18} />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 bg-teal-800 hover:bg-teal-700 rounded-full flex items-center justify-center transition-colors"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/5 hover:bg-[#00BEDB] text-gray-400 hover:text-[#00222b] rounded-lg border border-white/10 flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5"
                 aria-label="Instagram"
               >
-                <Image
-                  src="/icons/ri_instagram-fill.svg"
-                  alt="Instagram"
-                  width={20}
-                  height={20}
-                />
+                <Image src="/icons/ri_instagram-fill.svg" alt="Instagram" width={18} height={18} />
               </a>
             </div>
           </div>
 
-          {/* Combined Links: Company + Products (single grid column) */}
-          <div className="col-span-1">
-            <div className="flex flex-col md:flex-row md:space-x-8 items-start">
-              <div className="md:w-1/2">
-                <h3 className="font-bold text-sm md:text-lg mb-4">Company</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">About Us</Link>
-                  </li>
-                  <li>
-                    <Link href="/directors?tab=board" className="text-gray-300 hover:text-cyan-400 transition-colors">Board of Directors</Link>
-                  </li>
-                  <li>
-                    <Link href="/directors?tab=management" className="text-gray-300 hover:text-cyan-400 transition-colors">Key Management Team</Link>
-                  </li>
-                  <li>
-                    <Link href="/facilities" className="text-gray-300 hover:text-cyan-400 transition-colors">Infrastructure</Link>
-                  </li>
-                  <li>
-                    <Link href="/sustainability" className="text-gray-300 hover:text-cyan-400 transition-colors">Sustainability (ESG)</Link>
-                  </li>
-                  <li>
-                    <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact Us</Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="md:w-1/2 mt-6 md:mt-0">
-                <h3 className="font-bold text-sm md:text-lg mb-4">API Portfolio</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <Link href="/products" className="text-gray-300 hover:text-cyan-400 transition-colors">Fusidic Acid / Na Salt</Link>
-                  </li>
-                  <li>
-                    <Link href="/products" className="text-gray-300 hover:text-cyan-400 transition-colors">Daptomycin (Oct 2027)</Link>
-                  </li>
-                  <li>
-                    <Link href="/products" className="text-gray-300 hover:text-cyan-400 transition-colors">Teicoplanin (FY29 Launch)</Link>
-                  </li>
-                  <li>
-                    <Link href="/rnd/api" className="text-gray-300 hover:text-cyan-400 transition-colors">Advanced API R&amp;D</Link>
-                  </li>
-                  <li>
-                    <Link href="/rnd/pics" className="text-gray-300 hover:text-cyan-400 transition-colors">Lab &amp; Plant PICS</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          {/* Contact Info (3rd column) */}
-          <div className="col-span-1">
-            <h3 className="font-bold text-sm md:text-lg mb-4">Contact Info</h3>
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-start">
-                <div className="w-5 h-5 mr-3 mt-1 flex-shrink-0">
-                  <Image
-                    src="/icons/ic_baseline-phone.svg"
-                    alt="phone"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className="text-sm">
-                  Executive: <a href="tel:+919849499027" className="text-cyan-300 hover:underline">+91 98494 99027</a><br />
-                  Operations: <a href="tel:+919666000728" className="text-cyan-300 hover:underline">+91 96660 00728</a><br />
-                  Office: <a href="tel:+914024242999" className="hover:underline">+91 40 2424 2999</a>
-                </div>
+          {/* Column 2: Company Navigation (lg:col-span-2) */}
+          <div className="lg:col-span-2">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white/90 mb-4">
+              Company
+            </h3>
+            <ul className="space-y-2.5 text-xs sm:text-sm">
+              <li>
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors inline-block">
+                  About Us
+                </Link>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 mr-3 mt-1 flex-shrink-0">
-                  <Image
-                    src="/icons/ic_twotone-email.svg"
-                    alt="email"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className="text-sm">
-                  Commercial: <a href="mailto:sales@fermacbio.in" className="text-cyan-300 hover:underline">sales@fermacbio.in</a><br />
-                  General: <a href="mailto:info@fermacbio.in" className="hover:underline">info@fermacbio.in</a>
-                </div>
+              <li>
+                <Link href="/directors?tab=board" className="text-gray-400 hover:text-white transition-colors inline-block">
+                  Board of Directors
+                </Link>
+              </li>
+              <li>
+                <Link href="/directors?tab=management" className="text-gray-400 hover:text-white transition-colors inline-block">
+                  Leadership Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/facilities" className="text-gray-400 hover:text-white transition-colors inline-block">
+                  Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2 group">
+                  <span>Careers</span>
+                  <span className="text-[10px] font-semibold text-[#00BEDB] bg-[#00BEDB]/10 border border-[#00BEDB]/30 px-1.5 py-0.5 rounded leading-none">
+                    Hiring
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/sustainability" className="text-gray-400 hover:text-white transition-colors inline-block">
+                  Sustainability (ESG)
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors inline-block">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Locations (4th column) */}
-          <div className="col-span-1">
-            <h3 className="font-bold text-sm md:text-lg mb-4 tracking-wide">Locations</h3>
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-start">
-                <div className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-cyan-400">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1118 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                </div>
-                <div className="text-xs md:text-sm">
-                  <div className="font-semibold text-white mb-1">Corporate Headquarters</div>
-                  <a href="https://maps.app.goo.gl/7VTSratuc3JnYiNV6" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors block">Plot No: 08, 1st Floor, Dommara Pochampally, Dundigal Village, Dundigal - Gandimaisamma - 500 043, Telangana</a>
-                </div>
+          {/* Column 3: API Pipeline (lg:col-span-2) */}
+          <div className="lg:col-span-2">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white/90 mb-4">
+              API Pipeline
+            </h3>
+            <ul className="space-y-2.5 text-xs sm:text-sm">
+              <li>
+                <Link href="/products#fusidic-acid" className="text-gray-400 hover:text-white transition-colors inline-block">
+                  Fusidic Acid / Sodium
+                </Link>
               </li>
-              <li className="flex items-start">
-                <div className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-cyan-400">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1118 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                </div>
-                <div className="text-xs md:text-sm">
-                  <div className="font-semibold text-white mb-1">Factory &amp; Works</div>
-                  <a href="https://maps.app.goo.gl/bxL38GxmpFgtziTH8" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors block">Survey No. 273 &amp; 274, Usirikapally Village, Shivampet Mandal, Medak(Dt), Telangana, India, 502334</a>
-                </div>
+              <li>
+                <Link href="/products#daptomycin" className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2">
+                  <span>Daptomycin</span>
+                
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#teicoplanin" className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2">
+                  <span>Teicoplanin</span>
+                  
+                </Link>
+              </li>
+              <li>
+                <Link href="/rnd/api" className="text-gray-400 hover:text-white transition-colors inline-block">
+                  Advanced API R&amp;D
+                </Link>
+              </li>
+              <li>
+                <Link href="/rnd/pics" className="text-gray-400 hover:text-white transition-colors inline-block">
+                  Lab &amp; Plant Gallery
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="text-[#00BEDB] hover:text-cyan-300 transition-colors inline-flex items-center gap-1 font-medium pt-1">
+                  <span>All Monographs</span>
+                  <span>&rarr;</span>
+                </Link>
               </li>
             </ul>
+          </div>
+
+          {/* Column 4: Contact & Locations (lg:col-span-4) */}
+          <div className="lg:col-span-4 space-y-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white/90 mb-4">
+              Connect &amp; Locations
+            </h3>
+
+            {/* Direct Contact */}
+            <div className="space-y-2 text-xs sm:text-sm text-gray-300">
+              <div className="flex items-start gap-2.5">
+                <div className="w-5 h-5 rounded-md bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-[#00BEDB] mt-0.5">
+                  <Image src="/icons/ic_baseline-phone.svg" alt="phone" width={13} height={13} />
+                </div>
+                <div className="text-xs leading-relaxed">
+                  <div className="text-gray-400">Office: <a href="tel:+914024242999" className="text-gray-200 hover:text-[#00BEDB] transition-colors font-mono">+91 40 2424 2999</a></div>
+                  <div className="text-gray-400">Direct: <a href="tel:+919849499027" className="text-gray-200 hover:text-[#00BEDB] transition-colors font-mono">+91 98494 99027</a></div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5">
+                <div className="w-5 h-5 rounded-md bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-[#00BEDB] mt-0.5">
+                  <Image src="/icons/ic_twotone-email.svg" alt="email" width={13} height={13} />
+                </div>
+                <div className="text-xs leading-relaxed">
+                  <div className="text-gray-400">Inquiries: <a href="mailto:info@fermacbio.in" className="text-gray-200 hover:text-[#00BEDB] transition-colors">info@fermacbio.in</a></div>
+                  <div className="text-gray-400">Sales: <a href="mailto:sales@fermacbio.in" className="text-gray-200 hover:text-[#00BEDB] transition-colors">sales@fermacbio.in</a></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Addresses */}
+            <div className="pt-2 border-t border-white/10 space-y-3">
+              <div>
+                <div className="flex items-center justify-between text-xs font-medium text-white mb-0.5">
+                  <span>Corporate HQ</span>
+                  <a
+                    href="https://maps.app.goo.gl/7VTSratuc3JnYiNV6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] text-[#00BEDB] hover:underline inline-flex items-center gap-0.5 font-normal"
+                  >
+                    <span>Maps</span>
+                    <span>&rarr;</span>
+                  </a>
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed">
+                  Plot 08, 1st Fl, Dundigal, Hyderabad - 500 043
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between text-xs font-medium text-white mb-0.5">
+                  <span>Manufacturing Facility</span>
+                  <a
+                    href="https://maps.app.goo.gl/bxL38GxmpFgtziTH8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] text-[#00BEDB] hover:underline inline-flex items-center gap-0.5 font-normal"
+                  >
+                    <span>Maps</span>
+                    <span>&rarr;</span>
+                  </a>
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed">
+                  Sy. 273 &amp; 274, Shivampet, Medak - 502 334
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-teal-800/80 pt-6 mt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-xs sm:text-sm text-gray-400 gap-4">
-            <p>© {new Date().getFullYear()} Fermac Bio Private Limited. All Rights Reserved.</p>
-            <div className="flex flex-wrap items-center gap-6">
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors">
+        {/* Bottom Bar: Clean & Minimal */}
+        <div className="border-t border-white/10 pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+            <p className="text-center sm:text-left">
+              &copy; {new Date().getFullYear()} Fermac Bio Private Limited. All Rights Reserved.
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+              <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors">
+              <Link href="/terms" className="hover:text-white transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="hover:text-cyan-400 transition-colors">
+              <Link href="/cookies" className="hover:text-white transition-colors">
                 Cookie Policy
               </Link>
+             
+            
             </div>
           </div>
         </div>
