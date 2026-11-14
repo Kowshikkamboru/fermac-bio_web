@@ -679,45 +679,15 @@ export default function MicroscopeCursor() {
         />
       )}
 
-      {/* Subtle Floating Controls: Microscope Cursor Toggle & Status Pill */}
-      <div className="fixed bottom-4 right-4 z-40 flex items-center gap-2">
-        {showToggleNotice && (
+      {/* Toast Notice when toggled via shortcut */}
+      {showToggleNotice && (
+        <div className="fixed bottom-4 right-4 z-40 pointer-events-none flex items-center gap-2">
           <div className="bg-[#002F3C]/95 text-cyan-300 text-xs px-3 py-1.5 rounded-full border border-cyan-500/40 shadow-lg backdrop-blur-md animate-fade-in font-mono flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
             {enabled ? "Microscope Cursor: Enabled" : "Microscope Cursor: Disabled"}
           </div>
-        )}
-
-        <button
-          type="button"
-          onClick={() => {
-            setEnabled((prev) => {
-              const next = !prev;
-              localStorage.setItem("fermac_microscope_cursor", String(next));
-              setShowToggleNotice(true);
-              setTimeout(() => setShowToggleNotice(false), 2500);
-              return next;
-            });
-          }}
-          className={`group flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border backdrop-blur-md transition-all shadow-md ${
-            enabled
-              ? "bg-[#002F3C]/90 text-cyan-300 border-cyan-500/40 hover:bg-[#002F3C] hover:border-cyan-400"
-              : "bg-white/80 text-gray-700 border-gray-300 hover:bg-gray-100"
-          }`}
-          title="Toggle Microscope Cursor (Alt + M)"
-          aria-label="Toggle custom microscope cursor"
-        >
-          <span className="text-sm">🔬</span>
-          <span className="hidden sm:inline font-sans">
-            {enabled ? "Microscope Active" : "Default Cursor"}
-          </span>
-          <span
-            className={`w-2 h-2 rounded-full ${
-              enabled ? "bg-emerald-400 animate-pulse" : "bg-gray-400"
-            }`}
-          />
-        </button>
-      </div>
+        </div>
+      )}
     </>
   );
 }

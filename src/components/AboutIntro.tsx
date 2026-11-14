@@ -2,7 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function AboutIntro() {
+interface AboutIntroProps {
+  isStandalonePage?: boolean;
+}
+
+export default function AboutIntro({ isStandalonePage = false }: AboutIntroProps) {
   const highlights = [
     {
       num: "01",
@@ -18,9 +22,9 @@ export default function AboutIntro() {
     },
     {
       num: "03",
-      title: "Strategic Alliances & Domestic Self-Reliance",
+      title: "Strategic Alliances & Domestic Manufacturing Self-Reliance",
       description:
-        "Strategic corporate investment and distribution partnership with Fleming Laboratories Ltd (20+ years of global API manufacturing and market reach) and R&D collaboration with Bransun Labs (founded 2019). Addressing India's 100% import dependence on critical anti-infectives.",
+        "Strategic corporate investment and global partnership with Fleming Laboratories Ltd (20+ years of global API manufacturing and market reach in 65+ countries) and R&D collaboration with Bransun Labs. Eliminating India's 100% import dependence on critical anti-infectives through domestic primary manufacturing.",
     },
   ];
 
@@ -62,60 +66,78 @@ export default function AboutIntro() {
   ];
 
   return (
-    <div>
-      {/* 1. Hero Header Banner */}
-      <section className="relative bg-gradient-to-b from-[#002F3C] via-[#003847] to-[#004859] text-white pt-36 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden text-center">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#00BEDB_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
+    <div id="about" className="scroll-mt-20">
+      {/* 1. Standalone Header Banner (Only displayed on dedicated /about page) */}
+      {isStandalonePage && (
+        <section className="relative bg-gradient-to-b from-[#002F3C] via-[#003847] to-[#004859] text-white pt-36 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden text-center">
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#00BEDB_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
 
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-400/40 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-5">
-            <span className="w-2 h-2 rounded-full bg-[#00BEDB] animate-pulse" />
-            Established 2022 • Hyderabad, India
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            About <span className="text-[#00BEDB]">FERMAC BIO</span>
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light mb-8">
-            Fermac Bio Private Limited develops and manufactures world-class fermentation-based Active Pharmaceutical Ingredients (APIs), bringing together deep scientific domain knowledge, precision bioprocessing, and cGMP compliance.
-          </p>
+          <div className="max-w-4xl mx-auto relative z-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-400/40 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-5">
+              <span className="w-2 h-2 rounded-full bg-[#00BEDB] animate-pulse" />
+              Established 2022 • Hyderabad, India
+            </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              About <span className="text-[#00BEDB]">FERMAC BIO</span>
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light mb-8">
+              Fermac Bio Private Limited manufactures world-class fermentation-based Active Pharmaceutical Ingredients (APIs), uniting over 25 years of scientific mastery, precision bioprocessing, and strict cGMP compliance.
+            </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/directors"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#00BEDB] hover:bg-[#00aebd] text-[#002F3C] text-sm font-bold shadow-md hover:shadow-lg transition-all"
-            >
-              Meet Our Leadership &amp; Board →
-            </Link>
-            <Link
-              href="/facilities"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-semibold border border-white/20 backdrop-blur-xs transition-all"
-            >
-              Explore Manufacturing Facilities
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/directors"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#00BEDB] hover:bg-[#00aebd] text-[#002F3C] text-sm font-bold shadow-md hover:shadow-lg transition-all"
+              >
+                Meet Our Leadership &amp; Board →
+              </Link>
+              <Link
+                href="/facilities"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-semibold border border-white/20 backdrop-blur-xs transition-all"
+              >
+                Explore Infrastructure (340 kL+)
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* 2. Executive Overview & Image Section */}
       <section className="py-16 sm:py-20 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header for Home Page embed */}
+          {!isStandalonePage && (
+            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 border border-cyan-200 text-[#002F3C] text-xs font-bold uppercase tracking-wider mb-3">
+                <span className="w-2 h-2 rounded-full bg-[#00BEDB] animate-pulse" />
+                About Fermac Bio • Corporate Profile &amp; Heritage
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#002F3C] tracking-tight">
+                Pioneering <span className="text-[#00BEDB]">Fermentation Biotechnology</span> in India
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+                Established in 2022 by veteran fermentation scientists Suneel Kumar Battula and Baby Rani Polavarapu to manufacture high-potency APIs domestically, eliminating India&rsquo;s import reliance across critical anti-infectives.
+              </p>
+            </div>
+          )}
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left 7 cols: Content & Key Highlights */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-[#002F3C] text-xs font-bold uppercase tracking-wider">
-                Corporate Profile &amp; Capabilities
+                Manufacturing Excellence &amp; Capabilities
               </div>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#002F3C] tracking-tight">
-                Pioneering Fermentation Biotechnology in India
-              </h2>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#002F3C] tracking-tight">
+                Indigenous Primary Biomanufacturing Infrastructure
+              </h3>
 
               <p className="text-base text-gray-700 leading-relaxed font-normal">
-                Established in 2022 at Hyderabad, <strong className="text-[#002F3C]">Fermac Bio Private Limited</strong> was founded by fermentation scientists Suneel Kumar Battula and Baby Rani Polavarapu to develop and produce high-purity fermentation APIs domestically, addressing India&rsquo;s heavy import reliance across three vital anti-infectives: Fusidic Acid, Daptomycin, and Teicoplanin.
+                Established in 2022 at Hyderabad, <strong className="text-[#002F3C]">Fermac Bio Private Limited</strong> was founded by fermentation scientists Suneel Kumar Battula and Baby Rani Polavarapu to engineer and manufacture high-purity fermentation APIs domestically, addressing India&rsquo;s 100% import reliance across three vital anti-infectives: Fusidic Acid, Daptomycin, and Teicoplanin.
               </p>
 
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-                Backed by ~INR 660 Mn in plant infrastructure at Shivampet, Medak and a strategic alliance with Fleming Laboratories Ltd, Fermac Bio operates an integrated bioprocessing campus spanning culture preservation, automated fermenter cascades, and high-purity downstream crystallization suites.
+                Backed by ~INR 660 Mn in specialized manufacturing infrastructure at Shivampet, Medak and a strategic alliance with Fleming Laboratories Ltd, Fermac Bio operates an integrated bioprocessing campus spanning culture preservation, multi-stage automated fermenter cascades, and high-purity downstream crystallization suites.
               </p>
 
               {/* 3 Numbered Pillars */}
@@ -126,9 +148,9 @@ export default function AboutIntro() {
                       {item.num}
                     </span>
                     <div>
-                      <h3 className="text-sm sm:text-base font-bold text-[#002F3C] mb-1">
+                      <h4 className="text-sm sm:text-base font-bold text-[#002F3C] mb-1">
                         {item.title}
-                      </h3>
+                      </h4>
                       <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                         {item.description}
                       </p>
@@ -143,7 +165,7 @@ export default function AboutIntro() {
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 group">
                 <Image
                   src="/about.png"
-                  alt="Fermac Bio R&D Laboratory"
+                  alt="Fermac Bio R&D Laboratory and cGMP Suite"
                   width={900}
                   height={700}
                   className="object-cover w-full h-[360px] group-hover:scale-105 transition-transform duration-500"
@@ -164,11 +186,11 @@ export default function AboutIntro() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 rounded-xl bg-[#E9F6F8] border border-cyan-100 text-center">
                   <div className="text-2xl font-black text-[#002F3C]">340 kL+</div>
-                  <div className="text-xs text-gray-600 mt-1 font-medium">Total Capacity (A &amp; B)</div>
+                  <div className="text-xs text-gray-600 mt-1 font-medium">Design Bioreactor Capacity</div>
                 </div>
                 <div className="p-4 rounded-xl bg-[#E9F6F8] border border-cyan-100 text-center">
                   <div className="text-2xl font-black text-[#002F3C]">25+ Years</div>
-                  <div className="text-xs text-gray-600 mt-1 font-medium">Founding Experience</div>
+                  <div className="text-xs text-gray-600 mt-1 font-medium">Founding Expertise</div>
                 </div>
                 <div className="p-4 rounded-xl bg-[#E9F6F8] border border-cyan-100 text-center">
                   <div className="text-2xl font-black text-[#002F3C]">EP / BP / USP</div>
@@ -191,11 +213,11 @@ export default function AboutIntro() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 border border-cyan-200 text-[#002F3C] text-xs font-bold uppercase tracking-wider mb-3">
               Strategic Foundation
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#002F3C] tracking-tight">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#002F3C] tracking-tight">
               Mission, Vision &amp; Governance
-            </h2>
+            </h3>
             <p className="text-sm sm:text-base text-gray-600 mt-3 leading-relaxed">
-              Guided by a strong commitment to global healthcare quality, ethical scientific execution, and sustainable manufacturing practices.
+              Guided by a strong commitment to global healthcare quality, ethical scientific execution, and sustainable pharmaceutical manufacturing practices.
             </p>
           </div>
 
@@ -214,9 +236,9 @@ export default function AboutIntro() {
                       {item.badge}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-[#002F3C] mb-3">
+                  <h4 className="text-xl font-bold text-[#002F3C] mb-3">
                     {item.title}
-                  </h3>
+                  </h4>
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {item.description}
                   </p>
@@ -235,11 +257,11 @@ export default function AboutIntro() {
               <span className="px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-400/40 text-cyan-300 text-xs font-semibold uppercase tracking-wider inline-block">
                 Corporate Governance
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold">
+              <h3 className="text-2xl sm:text-3xl font-bold">
                 Guided by Distinguished Industry Leaders
-              </h2>
+              </h3>
               <p className="text-sm sm:text-base text-gray-200 leading-relaxed font-light">
-                Our Board of Directors and Key Management Team bring extensive experience across global pharmaceutical giants, bioprocess scale-up, and regulatory affairs.
+                Our Board of Directors and Key Management Team bring extensive experience across global pharmaceutical leaders, bioprocess scale-up, and regulatory affairs.
               </p>
             </div>
             <div className="shrink-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">

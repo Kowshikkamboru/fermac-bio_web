@@ -84,7 +84,7 @@ export default function Footer() {
                     <Link href="/directors?tab=management" className="text-gray-300 hover:text-cyan-400 transition-colors">Key Management Team</Link>
                   </li>
                   <li>
-                    <Link href="/facilities" className="text-gray-300 hover:text-cyan-400 transition-colors">Facilities</Link>
+                    <Link href="/facilities" className="text-gray-300 hover:text-cyan-400 transition-colors">Infrastructure</Link>
                   </li>
                   <li>
                     <Link href="/sustainability" className="text-gray-300 hover:text-cyan-400 transition-colors">Sustainability (ESG)</Link>

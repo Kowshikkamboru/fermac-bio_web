@@ -68,7 +68,7 @@ export default function ProductsIntro() {
             Three Critical <span className="text-[#00BEDB]">Fermentation Anti-Infectives</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed font-normal max-w-2xl mx-auto">
-            India currently imports 100% of these three lifesaving APIs. Fermac Bio enters as the nation&rsquo;s first domestic manufacturer, supplying global-standard bulk active ingredients to world-leading formulators.
+            India currently imports 100% of these three lifesaving APIs. Fermac Bio enters as the nation&rsquo;s first domestic manufacturer, manufacturing and delivering global-standard bulk active pharmaceutical ingredients for world-leading formulation companies.
           </p>
         </div>
 

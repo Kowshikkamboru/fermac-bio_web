@@ -46,7 +46,7 @@ const boardMembers: TeamMember[] = [
       "Strategic Alliances & JVs",
     ],
     responsibilities:
-      "Leads overarching technology, process development, manufacturing scale-up, and commercial API supply strategy.",
+      "Leads overarching technology, process development, manufacturing scale-up, and commercial API production and manufacturing strategy.",
   },
   {
     id: "baby-rani-polavarapu",

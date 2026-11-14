@@ -81,7 +81,7 @@ const partnersData: Partner[] = [
     id: "novagen-therapeutics",
     name: "Novagen Therapeutics AG",
     category: "distribution",
-    categoryLabel: "European Regulatory & Hospital Supply",
+    categoryLabel: "European Regulatory & Hospital Healthcare Alliances",
     countryCode: "CH",
     location: "Basel, Switzerland",
     tenure: "European Partner Since 2017",
@@ -136,9 +136,9 @@ const partnersData: Partner[] = [
   },
   {
     id: "apex-pharma",
-    name: "Apex Global Pharma Supply",
+    name: "Apex Global Pharma Distribution",
     category: "distribution",
-    categoryLabel: "Cold-Chain Supply & Customs",
+    categoryLabel: "Cold-Chain Logistics & Trade Clearance",
     countryCode: "SG",
     location: "Singapore",
     tenure: "Distribution Partner Since 2020",
@@ -513,10 +513,10 @@ export default function Partners() {
               Global Partner Network
             </div>
             <h3 className="text-xl sm:text-2xl font-extrabold text-[#002F3C]">
-              Interested in a Research or Commercial Supply Alliance?
+              Interested in a Research or Commercial Manufacturing Alliance?
             </h3>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              We collaborate with international pharmaceutical formulation developers, hospital supply consortia, and clinical research institutions worldwide.
+              We collaborate with international pharmaceutical formulation developers, global healthcare networks, and clinical research institutions worldwide.
             </p>
           </div>
           <Link

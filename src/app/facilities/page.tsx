@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Leading-Edge Facilities | FERMAC BIO - Bioprocess Infrastructure",
+  title: "Manufacturing Infrastructure | FERMAC BIO - 340 kL+ Biomanufacturing Campus",
   description:
     "Explore Fermac Bio's world-class biomanufacturing campus at Shivampet, Medak: 340 kL+ bioreactor capacity, 20,000 sq. meter production block, sterile cleanrooms, downstream crystallization, and 100% Zero Liquid Discharge (ZLD).",
 };
@@ -101,10 +101,10 @@ export default function FacilitiesPage() {
               Shivampet, Medak (Telangana) • ~5 Acres Campus
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-              Leading-Edge <span className="text-[#00BEDB]">Facilities</span>
+              Biomanufacturing <span className="text-[#00BEDB]">Infrastructure</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
-              Purpose-built for high-titer microbial fermentation, sterile downstream processing, and cGMP compliance — engineered to supply India&rsquo;s first domestic anti-infective APIs to global pharmaceutical markets.
+              Purpose-built for high-titer microbial fermentation, sterile downstream processing, and cGMP compliance &mdash; engineered to manufacture India&rsquo;s first domestic anti-infective APIs for global pharmaceutical markets.
             </p>
           </div>
         </section>
