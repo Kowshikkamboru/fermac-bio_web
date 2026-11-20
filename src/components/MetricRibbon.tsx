@@ -5,48 +5,65 @@ import React from "react";
 export default function MetricRibbon() {
   const metrics = [
     {
+      num: "01",
       value: "340 kL+",
-      label: "Fermentation Capacity",
-      desc: "3 × 33 KL commissioned in Block A, expanding to 340 kL+ total.",
+      label: "Fermentation Scale",
+      sub: "3 × 33 KL commissioned in Phase 1, expanding to 340 kL+ campus scale.",
     },
     {
+      num: "02",
       value: "1st in India",
       label: "Import Substitution",
-      desc: "First domestic producer for Fusidic Acid, Daptomycin & Teicoplanin.",
+      sub: "Primary domestic manufacturer for Fusidic Acid, Daptomycin & Teicoplanin.",
     },
     {
+      num: "03",
       value: "25+ Years",
       label: "Founding Expertise",
-      desc: "Veteran bioprocess engineers leading technology & commercial scaling.",
+      sub: "Veteran fermentation scientists leading bioprocess kinetics and commercial scaling.",
     },
     {
+      num: "04",
       value: "100% ZLD",
       label: "Zero Liquid Discharge",
-      desc: "Bio-ETP with MEE and RO membrane — 100% process water recycled.",
+      sub: "Bio-ETP with MEE & RO membranes — 100% industrial process water recycled.",
     },
   ];
 
   return (
-    <section className="bg-white border-b border-gray-100 py-12 relative z-20">
+    <section className="bg-white border-b border-gray-100 py-16 lg:py-20 relative z-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 divide-y-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 divide-y sm:divide-y-0 lg:divide-x divide-gray-100">
           {metrics.map((m, idx) => (
             <div
               key={idx}
-              className={`py-8 px-6 sm:px-8 ${
-                idx < metrics.length - 1
-                  ? "lg:border-r border-gray-100"
-                  : ""
-              } ${idx >= 2 ? "border-t border-gray-100 lg:border-t-0" : ""}`}
+              className={`flex flex-col justify-between ${
+                idx > 0 ? "pt-8 sm:pt-0 lg:pl-8" : ""
+              }`}
             >
-              <div className="text-3xl sm:text-4xl font-black text-[#001a24] tracking-tight leading-none mb-2">
-                {m.value}
+              <div>
+                {/* Minimalist index & cyan hairline accent */}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-[11px] font-mono font-bold text-gray-300 tracking-wider">
+                    {m.num}
+                  </span>
+                  <span className="w-5 h-0.5 bg-[#00BEDB]" />
+                </div>
+
+                {/* Bold authoritative stat */}
+                <div className="text-4xl lg:text-5xl font-black text-[#001a24] tracking-tight leading-none mb-2">
+                  {m.value}
+                </div>
+
+                {/* Cyan label */}
+                <div className="text-xs font-bold text-[#00BEDB] uppercase tracking-[0.14em] mb-3">
+                  {m.label}
+                </div>
               </div>
-              <div className="text-xs font-bold text-[#00BEDB] uppercase tracking-[0.12em] mb-2">
-                {m.label}
-              </div>
-              <p className="text-xs text-gray-500 leading-relaxed">
-                {m.desc}
+
+              {/* Clean description */}
+              <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-light">
+                {m.sub}
               </p>
             </div>
           ))}
