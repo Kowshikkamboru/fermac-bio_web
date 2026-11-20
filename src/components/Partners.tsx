@@ -506,24 +506,24 @@ export default function Partners() {
         </div>
 
         {/* Strategic Alliance Call-To-Action Banner */}
-        <div className="mt-12 bg-white rounded-3xl p-8 sm:p-10 border border-gray-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-          <div className="max-w-2xl space-y-1.5">
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#00BEDB]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00BEDB]" />
-              Global Partner Network
+        <div className="mt-12 bg-[#001a24] p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div className="max-w-2xl space-y-2">
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <span className="h-px w-6 bg-[#00BEDB]" />
+              <span className="text-[#00BEDB] text-xs font-semibold tracking-[0.2em] uppercase">Global Partner Network</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#002F3C]">
+            <h3 className="text-xl sm:text-2xl font-bold text-white">
               Interested in a Research or Commercial Manufacturing Alliance?
             </h3>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+            <p className="text-sm text-gray-400 leading-relaxed">
               We collaborate with international pharmaceutical formulation developers, global healthcare networks, and clinical research institutions worldwide.
             </p>
           </div>
           <Link
             href="/contact"
-            className="shrink-0 px-6 py-3 rounded-xl bg-[#002F3C] hover:bg-[#003B4C] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all"
+            className="shrink-0 px-7 py-3.5 bg-[#00BEDB] hover:bg-[#00a8c8] text-[#001a24] font-bold text-sm tracking-wide transition-colors"
           >
-            Initiate Alliance Dialogue &rarr;
+            Initiate Alliance Dialogue →
           </Link>
         </div>
 

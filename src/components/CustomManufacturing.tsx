@@ -1,41 +1,79 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function CustomManufacturing() {
   return (
-    <section className="relative py-20 bg-white">
-      <div className="w-full flex justify-center">
-        <div className="relative rounded-[32px] overflow-hidden" style={{ width: 1312, height: 475 }}>
-          {/* background image */}
-          <Image src="/hcontact.svg" alt="Custom manufacturing background" fill className="object-cover" priority />
+    <section className="py-20 sm:py-28 bg-[#001a24]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          {/* overlay removed per request */}
-
-          {/* blurred dark blobs */}
-          <div className="absolute -left-20 -top-12 w-[474px] h-[455px] bg-[#002F3C] opacity-80 rounded-full filter blur-[160px]" />
-          <div className="absolute left-[470px] top-[68px] w-[488px] h-[451px] bg-[#002F3C] opacity-80 rounded-full filter blur-[160px]" />
-          <div className="absolute left-[890px] -top-[53px] w-[509px] h-[465px] bg-[#002F3C] opacity-80 rounded-full filter blur-[160px]" />
-
-          {/* content */}
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-8">
-            <h2 className="font-poppins font-bold text-[42px] leading-[38px] text-white tracking-[0.02em] drop-shadow-[0_3px_4px_rgba(0,0,0,0.68)]">
-              Custom Manufacturing Solutions
+          {/* Left content */}
+          <div>
+            <div className="flex items-center gap-3 mb-5">
+              <span className="h-px w-8 bg-[#00BEDB]" />
+              <span className="text-[#00BEDB] text-xs font-semibold tracking-[0.2em] uppercase">
+                Custom Services
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight mb-6">
+              Custom Manufacturing
+              <br />
+              <span className="text-[#00BEDB]">Solutions</span>
             </h2>
-
-            <p className="mt-6 text-[20px] font-inter font-semibold leading-[43px] text-white tracking-[0.02em] max-w-[961px]">
-              In Addition To Our Core Products, We Offer Custom Manufacturing Services For Pharmaceutical Companies
-              Looking To Develop Specialized Antibiotic Formulations.
+            <p className="text-gray-400 text-base leading-relaxed mb-8">
+              Beyond our core API portfolio, we offer end-to-end custom manufacturing services
+              for pharmaceutical companies seeking specialized antibiotic formulations, process
+              development, and scale-up partnerships.
             </p>
 
-            <Link href="/contact" className="mt-10">
-              <div className="inline-flex items-center bg-white/20 border border-white rounded-[12px] px-6 py-3 backdrop-blur-sm">
-                <svg className="w-6 h-6 mr-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            <div className="space-y-3 mb-10">
+              {[
+                "Dedicated fermentation runs for custom molecules",
+                "Downstream isolation & crystallization optimization",
+                "Analytical method development & validation",
+                "Regulatory dossier preparation (DMF / CEP)",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="w-0.5 h-4 bg-[#00BEDB] mt-0.5 shrink-0" />
+                  <span className="text-sm text-gray-300">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#00BEDB] hover:bg-[#00a8c8] text-[#001a24] text-sm font-bold tracking-wide transition-colors"
+              >
+                Discuss Your Requirements
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-                <span className="text-white font-poppins font-semibold text-[26px] leading-[38px]">Contact Us</span>
-              </div>
-            </Link>
+              </Link>
+              <Link
+                href="/facilities"
+                className="inline-flex items-center justify-center px-7 py-3.5 border border-white/20 hover:border-white/40 text-white text-sm font-semibold transition-colors"
+              >
+                View Infrastructure
+              </Link>
+            </div>
           </div>
+
+          {/* Right side — simple stat block */}
+          <div className="grid grid-cols-2 gap-px bg-white/10">
+            {[
+              { value: "340 kL+", label: "Available Capacity", desc: "Flexible bioreactor allocation for custom projects." },
+              { value: "cGMP", label: "Fully Compliant", desc: "WHO-cGMP Schedule M facility for every batch." },
+              { value: "EP/BP/USP", label: "Pharmacopeial", desc: "International grade APIs with full documentation." },
+              { value: "100%", label: "ZLD Facility", desc: "Zero liquid discharge — sustainable manufacturing." },
+            ].map((item, i) => (
+              <div key={i} className="bg-[#001a24] border border-white/5 p-7">
+                <div className="text-2xl font-black text-white mb-1">{item.value}</div>
+                <div className="text-xs font-bold text-[#00BEDB] uppercase tracking-[0.12em] mb-2">{item.label}</div>
+                <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>

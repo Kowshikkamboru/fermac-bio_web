@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#00222b] via-[#001a21] to-[#001318] text-white pt-14 pb-10 border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-[#001318] text-white pt-14 pb-10 border-t border-white/10 overflow-hidden">
       {/* Subtle top edge highlight */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 max-w-4xl h-px bg-gradient-to-r from-transparent via-[#00BEDB]/30 to-transparent" />
 

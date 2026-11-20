@@ -107,16 +107,22 @@ export default function AboutIntro({ isStandalonePage = false }: AboutIntroProps
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header for Home Page embed */}
           {!isStandalonePage && (
-            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 border border-cyan-200 text-[#002F3C] text-xs font-bold uppercase tracking-wider mb-3">
-                <span className="w-2 h-2 rounded-full bg-[#00BEDB] animate-pulse" />
-                About Fermac Bio • Corporate Profile &amp; Heritage
+            <div className="max-w-2xl mb-16">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="h-px w-8 bg-[#00BEDB]" />
+                <span className="text-[#00BEDB] text-xs font-semibold tracking-[0.2em] uppercase">
+                  About Fermac Bio
+                </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#002F3C] tracking-tight">
-                Pioneering <span className="text-[#00BEDB]">Fermentation Biotechnology</span> in India
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#001a24] tracking-tight leading-tight mb-4">
+                Pioneering{" "}
+                <span className="text-[#00BEDB]">Fermentation Biotechnology</span>
+                <br />in India
               </h2>
-              <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-                Established in 2022 by veteran fermentation scientists Suneel Kumar Battula and Baby Rani Polavarapu to manufacture high-potency APIs domestically, eliminating India&rsquo;s import reliance across critical anti-infectives.
+              <p className="text-gray-500 text-base leading-relaxed">
+                Established in 2022 by veteran fermentation scientists Suneel Kumar Battula and
+                Baby Rani Polavarapu to manufacture high-potency APIs domestically, eliminating
+                India&rsquo;s import reliance across critical anti-infectives.
               </p>
             </div>
           )}

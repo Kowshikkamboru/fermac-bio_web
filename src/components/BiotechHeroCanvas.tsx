@@ -99,24 +99,24 @@ export default function BiotechHeroCanvas() {
         h * 0.45,
         Math.max(w * 0.55, 500)
       );
-      leftGlow.addColorStop(0, "rgba(0, 190, 219, 0.16)");
-      leftGlow.addColorStop(0.5, "rgba(0, 72, 89, 0.08)");
-      leftGlow.addColorStop(1, "rgba(0, 23, 31, 0)");
+      leftGlow.addColorStop(0, "rgba(0, 190, 219, 0.07)");
+      leftGlow.addColorStop(0.5, "rgba(2, 25, 42, 0.04)");
+      leftGlow.addColorStop(1, "rgba(2, 17, 29, 0)");
       ctx.fillStyle = leftGlow;
       ctx.fillRect(0, 0, w, h);
 
-      // Diagonal ambient glow following the DNA angle
+      // Diagonal ambient glow following the DNA angle (deep sapphire, zero neon fog behind logo)
       const diagGlow = ctx.createRadialGradient(
-        w * 0.82 + currentMouseX * 50,
+        w * 0.85 + currentMouseX * 50,
         h * 0.45 + currentMouseY * 40,
         0,
-        w * 0.8,
+        w * 0.85,
         h * 0.5,
         Math.max(w * 0.45, 420)
       );
-      diagGlow.addColorStop(0, "rgba(0, 225, 255, 0.14)");
-      diagGlow.addColorStop(0.4, "rgba(0, 95, 125, 0.08)");
-      diagGlow.addColorStop(1, "rgba(0, 23, 31, 0)");
+      diagGlow.addColorStop(0, "rgba(2, 35, 60, 0.08)");
+      diagGlow.addColorStop(0.5, "rgba(2, 20, 35, 0.03)");
+      diagGlow.addColorStop(1, "rgba(2, 17, 29, 0)");
       ctx.fillStyle = diagGlow;
       ctx.fillRect(0, 0, w, h);
 

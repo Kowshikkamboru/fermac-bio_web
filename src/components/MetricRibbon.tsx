@@ -7,45 +7,45 @@ export default function MetricRibbon() {
     {
       value: "340 kL+",
       label: "Fermentation Capacity",
-      desc: "3 × 33 KL commissioned in Block A (~100 kL), expanding to 340 kL+ total capacity.",
-      accent: "text-[#002F3C]",
+      desc: "3 × 33 KL commissioned in Block A, expanding to 340 kL+ total.",
     },
     {
       value: "1st in India",
       label: "Import Substitution",
-      desc: "First domestic producer for 3 critical fermentation APIs: Fusidic Acid, Daptomycin & Teicoplanin.",
-      accent: "text-[#00BEDB]",
+      desc: "First domestic producer for Fusidic Acid, Daptomycin & Teicoplanin.",
     },
     {
       value: "25+ Years",
-      label: "Founding Experience",
-      desc: "Veteran bioprocess engineers and fermentation scientists leading technology & scaling.",
-      accent: "text-[#002F3C]",
+      label: "Founding Expertise",
+      desc: "Veteran bioprocess engineers leading technology & commercial scaling.",
     },
     {
       value: "100% ZLD",
       label: "Zero Liquid Discharge",
-      desc: "Bio-ETP with Multiple Effect Evaporator (MEE) and RO recycling 100% of process water.",
-      accent: "text-emerald-600",
+      desc: "Bio-ETP with MEE and RO membrane — 100% process water recycled.",
     },
   ];
 
   return (
-    <section className="bg-white border-b border-gray-100 py-10 sm:py-12 relative z-20 shadow-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+    <section className="bg-white border-b border-gray-100 py-12 relative z-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 divide-y-0">
           {metrics.map((m, idx) => (
             <div
               key={idx}
-              className={`pt-4 sm:pt-0 ${idx !== 0 ? "sm:pl-8" : ""} text-left flex flex-col justify-start`}
+              className={`py-8 px-6 sm:px-8 ${
+                idx < metrics.length - 1
+                  ? "lg:border-r border-gray-100"
+                  : ""
+              } ${idx >= 2 ? "border-t border-gray-100 lg:border-t-0" : ""}`}
             >
-              <div className={`text-3xl sm:text-4xl font-extrabold ${m.accent} tracking-tight leading-none mb-1.5`}>
+              <div className="text-3xl sm:text-4xl font-black text-[#001a24] tracking-tight leading-none mb-2">
                 {m.value}
               </div>
-              <div className="text-xs sm:text-sm font-bold text-gray-900 mb-1">
+              <div className="text-xs font-bold text-[#00BEDB] uppercase tracking-[0.12em] mb-2">
                 {m.label}
               </div>
-              <p className="text-xs text-gray-500 leading-normal font-normal">
+              <p className="text-xs text-gray-500 leading-relaxed">
                 {m.desc}
               </p>
             </div>

@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #001a24;
 }
 
 :root {
@@ -12,25 +12,19 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", "Geist Sans", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Slide-up + fade animation utilities for hero content */
+/* ── Slide-up + fade animation ── */
 @keyframes slideUpFade {
   from {
     opacity: 0;
-    /* start noticeably below so it appears to come from the section below */
-    transform: translateY(120px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -40,19 +34,15 @@ body {
 
 .animate-slide-up {
   animation-name: slideUpFade;
-  animation-duration: 700ms;
+  animation-duration: 600ms;
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.2, 0.9, 0.2, 1);
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
 }
 
 @keyframes slideLeft {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
 }
 
 .animate-slide-left {
@@ -60,27 +50,23 @@ body {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .animate-fade-in {
   animation: fadeIn 200ms ease-out forwards;
 }
 
-/* Helper classes for staggered delays */
-.animate-delay-0 { animation-delay: 0ms; }
-.animate-delay-50 { animation-delay: 50ms; }
+/* ── Staggered delay helpers ── */
+.animate-delay-0   { animation-delay: 0ms; }
+.animate-delay-50  { animation-delay: 50ms; }
 .animate-delay-100 { animation-delay: 100ms; }
 .animate-delay-200 { animation-delay: 200ms; }
 .animate-delay-300 { animation-delay: 300ms; }
 .animate-delay-400 { animation-delay: 400ms; }
 
-/* Respect users who prefer reduced motion */
+/* ── Respect reduced-motion preference ── */
 @media (prefers-reduced-motion: reduce) {
   .animate-slide-up,
   .animate-delay-0,
@@ -96,7 +82,7 @@ body {
   }
 }
 
-/* Custom Microscope & Bacteria Cursor styles */
+/* ── Custom microscope cursor ── */
 @media (pointer: fine) {
   body.microscope-cursor-active,
   body.microscope-cursor-active a,
@@ -111,5 +97,27 @@ body {
   body.microscope-cursor-active textarea {
     cursor: text;
   }
+}
+
+/* ── Animated Scroll Indicator ── */
+@keyframes scrollDotDrop {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+}
+
+.animate-scroll-dot {
+  animation: scrollDotDrop 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
