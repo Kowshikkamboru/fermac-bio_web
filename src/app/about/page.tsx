@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "About Us | FERMAC BIO - Microbial Biotechnology & Fermentation API Manufacturer",
   description:
-    "Learn about Fermac Bio Private Limited: established in 2022 by fermentation scientists Suneel Kumar Battula and Baby Rani Polavarapu to manufacture critical fermentation APIs (Fusidic Acid, Daptomycin, Teicoplanin) in India.",
+    "Learn about Fermac Bio Private Limited: a biotechnology-driven fermentation enterprise producing specialty antibiotic APIs with integrated R&D and a 25,000 sq. m. global-scale manufacturing facility.",
 };
 
 export default function AboutPage() {

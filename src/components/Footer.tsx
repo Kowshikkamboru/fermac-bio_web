@@ -168,7 +168,6 @@ export default function Footer() {
                 </div>
                 <div className="text-xs leading-relaxed">
                   <div className="text-gray-400">Office: <a href="tel:+914024242999" className="text-gray-200 hover:text-[#00BEDB] transition-colors font-mono">+91 40 2424 2999</a></div>
-                  <div className="text-gray-400">Direct: <a href="tel:+919849499027" className="text-gray-200 hover:text-[#00BEDB] transition-colors font-mono">+91 98494 99027</a></div>
                 </div>
               </div>
 

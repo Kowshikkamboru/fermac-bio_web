@@ -6,27 +6,27 @@ export default function MetricRibbon() {
   const metrics = [
     {
       num: "01",
-      value: "340 kL+",
-      label: "Fermentation Scale",
-      sub: "3 × 33 KL commissioned in Phase 1, expanding to 340 kL+ campus scale.",
+      value: "25,000 sq. m.",
+      label: "Integrated Facility",
+      sub: "5-acre campus near Hyderabad in Medak District; Block A operational, second block planned for expansion.",
     },
     {
       num: "02",
-      value: "1st in India",
-      label: "Import Substitution",
-      sub: "Primary domestic manufacturer for Fusidic Acid, Daptomycin & Teicoplanin.",
+      value: "6 × 33 KL",
+      label: "Block A Fermenters",
+      sub: "3 production fermenters currently operational and 3 planned for capacity expansion (350 KL scalable site).",
     },
     {
       num: "03",
-      value: "25+ Years",
-      label: "Founding Expertise",
-      sub: "Veteran fermentation scientists leading bioprocess kinetics and commercial scaling.",
+      value: "SCADA + DSP",
+      label: "Automated Bioprocessing",
+      sub: "Integrated cell culture lab, seed train, continuous downstream processing, and ANFD isolation suites.",
     },
     {
       num: "04",
       value: "100% ZLD",
       label: "Zero Liquid Discharge",
-      sub: "Bio-ETP with MEE & RO membranes — 100% industrial process water recycled.",
+      sub: "Bio-ETP, RO system, MEE & ATFD — comprehensive water treatment, recovery, and reuse.",
     },
   ];
 
@@ -42,7 +42,6 @@ export default function MetricRibbon() {
               }`}
             >
               <div>
-                {/* Minimalist index & cyan hairline accent */}
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[11px] font-mono font-bold text-gray-300 tracking-wider">
                     {m.num}
@@ -50,18 +49,15 @@ export default function MetricRibbon() {
                   <span className="w-5 h-0.5 bg-[#00BEDB]" />
                 </div>
 
-                {/* Bold authoritative stat */}
-                <div className="text-4xl lg:text-5xl font-black text-[#001a24] tracking-tight leading-none mb-2">
+                <div className="text-3xl lg:text-4xl font-black text-[#001a24] tracking-tight leading-none mb-2">
                   {m.value}
                 </div>
 
-                {/* Cyan label */}
                 <div className="text-xs font-bold text-[#00BEDB] uppercase tracking-[0.14em] mb-3">
                   {m.label}
                 </div>
               </div>
 
-              {/* Clean description */}
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-light">
                 {m.sub}
               </p>

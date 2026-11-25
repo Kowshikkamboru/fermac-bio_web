@@ -51,7 +51,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 mb-6">
               <span className="h-px w-8 bg-[#00BEDB] shrink-0" />
               <span className="text-[#00BEDB] text-xs font-semibold tracking-[0.18em] uppercase">
-                In Strategic Alliance with Fleming Laboratories Ltd
+                Joint Venture of Bransun Labs &amp; Fleming Laboratories Ltd
               </span>
             </div>
 
@@ -70,10 +70,10 @@ export default function Hero() {
 
             {/* Sub-copy */}
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-10 max-w-xl font-light">
-              WHO-cGMP certified manufacturer of{" "}
+              WHO-cGMP certified manufacturer of premium-grade fermentation-based APIs —{" "}
               <strong className="text-white font-medium">Fusidic Acid, Sodium Fusidate, Daptomycin</strong>{" "}
-              and <strong className="text-white font-medium">Teicoplanin</strong> — engineered at our
-              340 kL+ biomanufacturing campus in Shivampet, Medak. EP / BP / USP pharmacopeial grade with 100% Zero Liquid Discharge.
+              and <strong className="text-white font-medium">Teicoplanin (FB-03)</strong> — engineered at our
+              25,000 sq. m. integrated biomanufacturing campus (6 × 33 KL Block A fermenters; 3 operational) in Medak District near Hyderabad.
             </p>
 
             {/* CTAs */}

@@ -123,7 +123,7 @@ const jobPositions: JobPosition[] = [
     tags: ["High-Pressure Boilers", "Oil-Free Compressors", "MEE / ATFD", "100% ZLD"],
     badgeColor: "bg-[#9a3412] text-white border-transparent shadow-xs",
     summary:
-      "Oversee critical continuous utilities powering 340 kL+ fermentation operations, including high-pressure boilers, oil-free air compressors, chilling systems, and 100% Zero Liquid Discharge (ZLD) effluent loops.",
+      "Oversee critical continuous utilities powering 25,000 sq. m. fermentation operations, including high-pressure boilers, oil-free air compressors, chilling systems, and 100% Zero Liquid Discharge (ZLD) effluent loops.",
     responsibilities: [
       "Maintain continuous operation of high-pressure multi-fuel boilers and clean steam generation.",
       "Operate 100% oil-free screw air compressors delivering sterile compressed air for continuous aeration.",
@@ -175,8 +175,8 @@ const perksList = [
     ),
   },
   {
-    title: "340 kL+ Mega-Scale Bioprocessing",
-    description: "Gain rare hands-on mastery operating 33 KL fermenters, automated ANFDs, and PAT analytics in a commercial plant.",
+    title: "350 KL Mega-Scale Bioprocessing",
+    description: "Gain rare hands-on mastery operating 33 KL fermenters, automated ANFDs, and SCADA/PAT analytics in a commercial plant.",
     icon: (
       <svg className="w-5 h-5 text-[#00BEDB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -382,7 +382,7 @@ export default function CareersClient() {
             Build The Future Of <span className="text-[#00BEDB]">Biomanufacturing</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light mb-8">
-            Join India&rsquo;s pioneer in microbial fermentation APIs. We combine world-class bioprocess science with state-of-the-art 340 kL+ infrastructure to manufacture lifesaving anti-infectives with purpose and precision.
+            Join India&rsquo;s pioneer in microbial fermentation APIs. We combine world-class bioprocess science with a state-of-the-art 25,000 sq. m. integrated facility to manufacture lifesaving anti-infectives with purpose and precision.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -405,8 +405,8 @@ export default function CareersClient() {
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto pt-8 border-t border-cyan-900/60">
             <div className="text-center p-3 rounded-xl bg-white/[0.04] border border-white/5">
-              <div className="text-2xl sm:text-3xl font-extrabold text-[#00BEDB]">340 kL+</div>
-              <div className="text-xs text-gray-300 mt-1">Design Fermentation Scale</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-[#00BEDB]">25,000 m²</div>
+              <div className="text-xs text-gray-300 mt-1">Integrated Biomanufacturing</div>
             </div>
             <div className="text-center p-3 rounded-xl bg-white/[0.04] border border-white/5">
               <div className="text-2xl sm:text-3xl font-extrabold text-[#00BEDB]">100%</div>

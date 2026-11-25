@@ -112,13 +112,13 @@ export default function ApiRndPage() {
                 Precision Fermentation R&D
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#002F3C] leading-tight">
-                Pioneering Secondary Metabolite Research for Global Healthcare
+                Strong Technical Background: From Lab to Commercial Scale
               </h2>
               <p className="text-gray-600 leading-relaxed text-base">
-                Fermac Bio’s dedicated Research & Development center bridges the gap between laboratory microbiology and commercial-scale API synthesis. Specializing in steroid-structured antibiotic molecules such as <strong>Fusidic Acid</strong> and its water-soluble salt <strong>Sodium Fusidate</strong>, our scientists focus on high-titer production, impurity profiling, and physical form engineering.
+                Fermac Bio is the brainchild of Biotech and Chemical engineers, each bringing <strong>25+ years of experience</strong> in microbial fermentation. Our dedicated Research &amp; Development capabilities bridge laboratory microbiology and commercial-scale API synthesis—backed by collaborations with <strong>Bransun Labs</strong> and <strong>Fleming Labs</strong> for cutting-edge technology, strain improvement, and process optimization.
               </p>
               <p className="text-gray-600 leading-relaxed text-base">
-                Our pilot fermentation facilities allow rapid parameter mapping and seamless scale-up to multi-thousand-liter industrial bioreactors, ensuring that every batch meets the most stringent international pharmacopoeial standards (EP, BP, USP, and IP).
+                Strong in process engineering and scale-up, our team moves molecules from lab to commercial scale efficiently—specializing in complex fermentation APIs such as <strong>Fusidic Acid</strong>, <strong>Sodium Fusidate</strong>, <strong>Daptomycin</strong>, and <strong>Teicoplanin</strong> under harmonized EP, BP, USP, and IP pharmacopeial standards.
               </p>
 
               <div className="pt-2 flex flex-wrap gap-4">
@@ -140,8 +140,8 @@ export default function ApiRndPage() {
             {/* Real Lab Image */}
             <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 group">
               <Image
-                src="/images/WhatsApp Image 2026-10-23 at 9.53.21 AM.jpeg"
-                alt="Fermac Bio Analytical and Microbiology R&D Laboratory"
+                src="/images/WhatsApp Image 2026-11-11 at 2.08.46 PM (1).jpeg"
+                alt="Fermac Bio Culture Lab and Microbiology Research Facility"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -149,8 +149,8 @@ export default function ApiRndPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
                 <div className="text-white">
-                  <div className="text-xs font-mono text-cyan-300">Analytical & Testing Suite</div>
-                  <div className="font-bold text-lg">In-House Microbiology & QC Lab</div>
+                  <div className="text-xs font-mono text-cyan-300">Biosafety &amp; Preservation</div>
+                  <div className="font-bold text-lg">Culture Laboratory &amp; Process Development</div>
                 </div>
               </div>
             </div>
@@ -208,48 +208,48 @@ export default function ApiRndPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg border border-gray-200 group">
               <Image
-                src="/images/WhatsApp Image 2026-10-23 at 9.53.20 AM.jpeg"
-                alt="Laminar Flow Biosafety Inoculation"
+                src="/images/WhatsApp Image 2026-11-11 at 2.08.47 PM.jpeg"
+                alt="Sterile Cleanroom Pass-Through Sterilizer"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
                 <div className="text-white">
-                  <div className="text-xs font-mono text-cyan-300">Sterile Handling</div>
-                  <div className="font-bold text-base">Class II Biosafety & Inoculation</div>
+                  <div className="text-xs font-mono text-cyan-300">Biosafety &amp; Sterility</div>
+                  <div className="font-bold text-base">Cleanroom Sterilization &amp; Inoculation</div>
                 </div>
               </div>
             </div>
 
             <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg border border-gray-200 group">
               <Image
-                src="/images/WhatsApp Image 2026-10-23 at 9.53.22 AM (1).jpeg"
-                alt="Pilot and Commercial Bioreactors"
+                src="/images/deck/fermentation-battery.jpg"
+                alt="Fermentation Battery and SCADA Automation"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
                 <div className="text-white">
-                  <div className="text-xs font-mono text-cyan-300">Pilot Bioprocessing</div>
-                  <div className="font-bold text-base">Fermentation Kinetics Cascade</div>
+                  <div className="text-xs font-mono text-cyan-300">SCADA Bioprocessing</div>
+                  <div className="font-bold text-base">Fermentation Battery &amp; Seed Train</div>
                 </div>
               </div>
             </div>
 
             <div className="relative h-72 rounded-2xl overflow-hidden shadow-lg border border-gray-200 group">
               <Image
-                src="/images/WhatsApp Image 2026-10-23 at 9.53.25 AM.jpeg"
-                alt="Production Fermentation Vessel"
+                src="/images/WhatsApp Image 2026-11-11 at 2.08.48 PM (1).jpeg"
+                alt="Pharma Block ANFD and Downstream Purification"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
                 <div className="text-white">
-                  <div className="text-xs font-mono text-cyan-300">Industrial Scale-Up</div>
-                  <div className="font-bold text-base">Multi-Kiloliter Fermentation Unit</div>
+                  <div className="text-xs font-mono text-cyan-300">Downstream Isolation</div>
+                  <div className="font-bold text-base">Pharma Block Crystallizers &amp; ANFD</div>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SustainabilitySection() {
@@ -50,14 +51,14 @@ export default function SustainabilitySection() {
         </svg>
       ),
       title: "Water Conservation & ZLD Systems",
-      subtitle: "Zero Liquid Discharge & circular water recycling",
+      subtitle: "Bio-ETP → RO system → MEE → ATFD → Recover & reuse",
       content:
-        "Water is an indispensable resource in fermentation, and its responsible management is central to our sustainability efforts. We have invested in Zero Liquid Discharge (ZLD) systems across our manufacturing units to treat and recycle wastewater while eliminating untreated liquid discharge.",
+        "Fermac Bio is committed to environmentally responsible manufacturing through a comprehensive Zero Liquid Discharge (ZLD) system. Our treatment facility is equipped with a Biological Effluent Treatment Plant (Bio-ETP), RO system, Multiple Effect Evaporator (MEE), and Agitated Thin Film Dryer (ATFD) to effectively treat, recover, and reuse water.",
       points: [
-        "Zero Liquid Discharge (ZLD) technology recycling 100% of process effluents",
-        "Advanced multi-effect evaporators (MEE) & reverse osmosis (RO) purification",
-        "Extensive campus rainwater harvesting infrastructure replenishing groundwater tables",
-        "Continuous reduction in specific fresh-water intake per kilogram of API produced",
+        "Biological Effluent Treatment Plant (Bio-ETP) treating organic fermentation streams",
+        "Reverse Osmosis (RO) membrane recovery & Multiple Effect Evaporators (MEE)",
+        "Agitated Thin Film Dryer (ATFD) completing zero-discharge solids recovery",
+        "Closed-loop water recovery and reuse minimizing fresh-water consumption",
       ],
       tag: "100% ZLD Mandate",
     },
@@ -180,6 +181,45 @@ export default function SustainabilitySection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* ZLD Plant Photo Strip (Slide 12) */}
+        <div className="mt-16 rounded-2xl border border-gray-200 bg-[#fbfcfd] p-8 sm:p-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <div>
+              <div className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">
+                Zero Liquid Discharge Infrastructure
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#002F3C] tracking-tight">
+                ZLD Treatment Train: Bio-ETP · RO · MEE · ATFD
+              </h2>
+            </div>
+            <span className="text-xs font-semibold text-gray-500">
+              Recover &amp; Reuse Closed-Loop System
+            </span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              { label: "RO PLANT", src: "/images/WhatsApp Image 2026-10-23 at 9.53.18 AM (1).jpeg" },
+              { label: "BIO ETP", src: "/images/WhatsApp Image 2026-10-23 at 9.53.18 AM.jpeg" },
+              { label: "MEE PLANT", src: "/images/WhatsApp Image 2026-10-23 at 9.53.19 AM.jpeg" },
+            ].map((item) => (
+              <div key={item.label} className="relative h-64 rounded-2xl overflow-hidden border border-gray-200 shadow-xs group">
+                <Image
+                  src={item.src}
+                  alt={item.label}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                />
+                <div className="absolute bottom-3 left-3">
+                  <span className="px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-[#02111d]/90 text-white border border-white/15">
+                    {item.label}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Commitment Statement Card */}

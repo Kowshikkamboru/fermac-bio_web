@@ -146,7 +146,7 @@ export default function Navigation() {
                 onMouseLeave={handleInfraLeave}
               >
                 {[
-                  { href: "/facilities", label: "Manufacturing Facilities", sub: "340 kL+ Bioreactor cascades · Cleanrooms" },
+                  { href: "/facilities", label: "Manufacturing Facilities", sub: "25,000 sq. m. Campus · 6 × 33 KL Fermenters" },
                   { href: "/rnd/api", label: "Advanced R&D", sub: "Strain selection · Bioprocess kinetics" },
                   { href: "/rnd/pics", label: "Facility Gallery", sub: "Plant · Cleanroom · Lab photo tour" },
                 ].map((item, i, arr) => (

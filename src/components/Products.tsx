@@ -25,11 +25,11 @@ const productList: ProductDetails[] = [
   {
     id: "fusidic-acid",
     name: "Fusidic Acid",
-    categoryBadge: "Narrow-Spectrum Anti-Staphylococcal API",
-    commercialStatus: "Commercial Production • Jun 2026",
+    categoryBadge: "Skin & Soft-Tissue Anti-Staphylococcal API",
+    commercialStatus: "Commercial API Platform",
     statusColor: "bg-[#002F3C] text-cyan-300 border-cyan-400/30",
     whatIsIt:
-      "Fusidic Acid is a potent narrow-spectrum antibiotic manufactured via microbial fermentation. It specifically targets Gram-positive bacteria, especially Methicillin-Resistant Staphylococcus aureus (MRSA). Highly effective for dermatological, ophthalmic, and surgical wound infections without promoting cross-resistance to other major antibiotic classes.",
+      "Fusidic Acid is a potent narrow-spectrum antibiotic manufactured via microbial fermentation. It specifically targets Gram-positive bacteria, especially Methicillin-Resistant Staphylococcus aureus (MRSA), for skin and soft-tissue, ophthalmic, and surgical wound infections without promoting cross-resistance to other major antibiotic classes.",
     capabilities: [
       "In-house microbial strain development and high-titer fermentation bioprocessing",
       "Automated feeding cascades in commercial 33 KL bioreactors at Shivampet campus",
@@ -38,7 +38,7 @@ const productList: ProductDetails[] = [
     ],
     capacity: "~21,600 kg Peak Annual Capacity",
     capacitySubtext:
-      "Capable of fulfilling 100% of India's domestic consumption (~6.9 metric tons p.a.) and manufacturing for global markets.",
+      "Serving global demand (~90 MT p.a.) and India's import volume (~14 MT p.a. incl. Sodium Fusidate), in a segment with very few global producers (Leo Pharma, Ercros, Zhejiang Yongning).",
     speciality:
       "Engineered particle micronization: Standard crystalline, Micronized (D90 < 10 µm), and Ultra-Fine (D90 < 5 µm) cuts designed for enhanced skin permeation and smooth ophthalmic suspensions.",
     qualityGrade: ["EP (European)", "BP (British)", "USP (United States)", "IP (Indian)"],
@@ -58,7 +58,7 @@ const productList: ProductDetails[] = [
     id: "sodium-fusidate",
     name: "Sodium Fusidate",
     categoryBadge: "Water-Soluble Antibiotic Salt API",
-    commercialStatus: "Commercial Production • Jun 2026",
+    commercialStatus: "Commercial API Platform",
     statusColor: "bg-cyan-950 text-cyan-300 border-cyan-400/30",
     whatIsIt:
       "Sodium Fusidate is the freely water-soluble sodium salt of Fusidic Acid. While retaining identical bactericidal power against MRSA and Staphylococcal infections, its high water solubility makes it ideal for oral tablets, hospital solutions, and sterile impregnated antibacterial wound dressings.",
@@ -90,7 +90,7 @@ const productList: ProductDetails[] = [
     id: "daptomycin",
     name: "Daptomycin",
     categoryBadge: "WHO Critically-Important Injectable Lipopeptide API",
-    commercialStatus: "Commercial Launch • Oct 2027",
+    commercialStatus: "Sterile Injectable Grade",
     statusColor: "bg-emerald-950 text-emerald-300 border-emerald-400/30",
     whatIsIt:
       "Daptomycin is an essential cyclic lipopeptide antibiotic listed as a critically important antimicrobial by the World Health Organization (WHO). It is a vital last-resort hospital injectable therapy for severe Gram-positive infections including MRSA bacteremia, right-sided endocarditis, and complicated skin and soft tissue infections.",
@@ -102,7 +102,7 @@ const productList: ProductDetails[] = [
     ],
     capacity: "~2,040 kg Peak Annual Capacity",
     capacitySubtext:
-      "High-value specialty molecule (> US$ 12,000/kg) manufactured in dedicated Block B suites.",
+      "Addressing India's domestic hospital import requirement (~5 MT p.a.) in a specialized segment served by very few global producers (Xellia, Zhejiang Hisun).",
     speciality:
       "Rapid bactericidal action through membrane depolarization without cellular lysis. Ultra-pure injectable grade engineered specifically for sterile parenteral vial lyophilization.",
     qualityGrade: ["USP (United States)", "EP (European)", "IP (Indian)"],
@@ -119,21 +119,21 @@ const productList: ProductDetails[] = [
   },
   {
     id: "teicoplanin",
-    name: "Teicoplanin",
-    categoryBadge: "WHO Critically-Important Glycopeptide API",
-    commercialStatus: "Pipeline Development • Launch FY29",
+    name: "Teicoplanin (FB-03)",
+    categoryBadge: "Injectable Glycopeptide — Renal-Safe Profile",
+    commercialStatus: "Specialty Glycopeptide Pipeline",
     statusColor: "bg-indigo-950 text-indigo-300 border-indigo-400/30",
     whatIsIt:
-      "Teicoplanin is a WHO critically important parenteral glycopeptide antibiotic used in hospital intensive care units to treat severe Gram-positive bacterial infections. It is clinically favored for renally compromised patients due to its significantly lower nephrotoxicity compared to vancomycin, with the convenience of once-daily dosing.",
+      "Teicoplanin (FB-03) is a WHO critically important parenteral glycopeptide antibiotic used in hospital intensive care units to treat severe Gram-positive bacterial infections. It is clinically favored for renally compromised patients due to its lower nephrotoxicity compared to vancomycin, with the convenience of once-daily dosing.",
     capabilities: [
-      "Dedicated 20 KL fermenter trains engineered specifically for lipoglycopeptide yields",
+      "Dedicated fermentation trains engineered specifically for lipoglycopeptide yields",
       "Proprietary isolation methods maintaining natural A2 and A3 component distribution",
-      "Closed-loop downstream separation sustaining ~80% gross margins at commercial scale",
+      "Closed-loop downstream separation ensuring consistent pharmacopeial purity",
       "Strict microbiological assay testing and chromatographic profile validation",
     ],
-    capacity: "~2,808 kg Peak Annual Capacity",
+    capacity: "Scalable Block B Expansion",
     capacitySubtext:
-      "Designed to address a US$ 820M expanding global market previously dominated by only 2–3 overseas producers.",
+      "Engineered to address hospital demand in an underserved global glycopeptide market with very few primary fermentation producers.",
     speciality:
       "Favorable renal safety profile with prolonged half-life, engineered with exact component ratio distribution conforming strictly to harmonized EP monographs.",
     qualityGrade: ["EP (European)", "BP (British)", "IP (Indian)"],
@@ -160,7 +160,7 @@ export default function Products() {
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-400/40 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-5">
             <span className="w-2 h-2 rounded-full bg-[#00BEDB] animate-pulse" />
-            Manufactured in India • 340 kL+ Biomanufacturing Campus
+            Manufactured in India • 25,000 sq. m. Biomanufacturing Campus
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
             Our Manufactured <span className="text-[#00BEDB]">API Products</span>
@@ -310,7 +310,7 @@ export default function Products() {
                   {prod.capacitySubtext}
                 </p>
                 <div className="pt-2 border-t border-gray-200 text-xs text-gray-500 font-medium">
-                  340 kL+ campus infrastructure across Blocks A &amp; B in Shivampet, Medak.
+                  25,000 sq. m. integrated campus infrastructure with 6 × 33 KL Block A fermenters in Shivampet, Medak.
                 </div>
               </div>
 
@@ -411,7 +411,7 @@ export default function Products() {
               href="/facilities"
               className="px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 backdrop-blur-xs transition-colors"
             >
-              Tour Manufacturing Infrastructure (340 kL+)
+              Tour Manufacturing Infrastructure (25,000 sq. m.)
             </Link>
           </div>
         </div>

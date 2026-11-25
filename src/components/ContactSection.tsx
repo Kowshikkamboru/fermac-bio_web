@@ -128,7 +128,7 @@ export default function ContactSection() {
                   <div>
                     <h3 className="text-base font-bold text-[#002F3C]">Factory &amp; Manufacturing Works (100% ZLD)</h3>
                     <p className="text-xs sm:text-sm text-gray-600 mt-1.5 leading-relaxed">
-                      Survey No. 273 &amp; 274, Usirikapally Village, Shivampet Mandal, Medak District, Telangana, India, 502334. ~5-acre dedicated biomanufacturing campus with 20,000 sq. meter production block, 340 kL+ design capacity, and 100% Zero Liquid Discharge.
+                      Survey No. 273 &amp; 274, Usirikapally Village, Shivampet Mandal, Medak District, Telangana, India, 502334. 5-acre dedicated biomanufacturing campus with a 25,000 sq. m. integrated facility, 6 × 33 KL Block A fermenters, and 100% Zero Liquid Discharge.
                     </p>
                     <a
                       href="https://maps.app.goo.gl/bxL38GxmpFgtziTH8"
@@ -143,29 +143,8 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* Direct Leadership & Communications */}
+              {/* Direct Corporate Communications */}
               <div className="bg-white rounded-2xl p-6 sm:p-7 border border-gray-200/90 shadow-xs space-y-4">
-                {/* Executive Contacts */}
-                <div className="space-y-3 pb-3 border-b border-gray-100">
-                  <div className="text-xs font-bold uppercase tracking-wider text-[#002F3C]">
-                    Executive Leadership Contacts
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                    <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-100">
-                      <div className="font-bold text-gray-900">Mr. Suneel Kumar Battula</div>
-                      <div className="text-[11px] text-gray-500 mb-1">Founder, CEO &amp; Technology Lead</div>
-                      <div className="text-gray-700">Tel: <a href="tel:+919849499027" className="text-[#00BEDB] hover:underline font-semibold">+91 98494 99027</a></div>
-                      <div className="text-gray-700">Email: <a href="mailto:Suneel@fermacbio.in" className="hover:underline">Suneel@fermacbio.in</a></div>
-                    </div>
-                    <div className="p-2.5 rounded-lg bg-gray-50 border border-gray-100">
-                      <div className="font-bold text-gray-900">Mr. Jeyamurga Prakash</div>
-                      <div className="text-[11px] text-gray-500 mb-1">Co-Founder &amp; Project Lead</div>
-                      <div className="text-gray-700">Tel: <a href="tel:+919666000728" className="text-[#00BEDB] hover:underline font-semibold">+91 96660 00728</a></div>
-                      <div className="text-gray-700">Email: <a href="mailto:Prakash@fermacbio.in" className="hover:underline">Prakash@fermacbio.in</a></div>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center shrink-0 text-gray-600 border border-gray-200">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

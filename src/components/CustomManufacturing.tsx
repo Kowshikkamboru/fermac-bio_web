@@ -6,34 +6,31 @@ export default function CustomManufacturing() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          {/* Left content */}
+          {/* Left content: Scalable and Diverse Platform (Slide 18 Point 3) */}
           <div>
             <div className="flex items-center gap-3 mb-5">
               <span className="h-px w-8 bg-[#00BEDB]" />
               <span className="text-[#00BEDB] text-xs font-semibold tracking-[0.2em] uppercase">
-                Custom Services
+                Scalable &amp; Diverse Platform
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight mb-6">
-              Custom Manufacturing
-              <br />
-              <span className="text-[#00BEDB]">Solutions</span>
+              Modular Fermentation &amp;{" "}
+              <span className="text-[#00BEDB]">Custom Manufacturing</span>
             </h2>
             <p className="text-gray-400 text-base leading-relaxed mb-8">
-              Beyond our core API portfolio, we offer end-to-end custom manufacturing services
-              for pharmaceutical companies seeking specialized antibiotic formulations, process
-              development, and scale-up partnerships.
+              Our core fermentation technology is modular and transferable across high-value APIs, enabling horizontal scaling. The same biomanufacturing infrastructure supports forward integration into finished dosages, global contract manufacturing, and adjacent biotechnology segments.
             </p>
 
             <div className="space-y-3 mb-10">
               {[
-                "Dedicated fermentation runs for custom molecules",
-                "Downstream isolation & crystallization optimization",
-                "Analytical method development & validation",
-                "Regulatory dossier preparation (DMF / CEP)",
+                "Modular fermentation technology transferable across high-value APIs for horizontal scaling",
+                "Infrastructure ready for finished dosages (FDF) or contract manufacturing for global clients",
+                "Platform extendable to adjacent segments including enzymes, probiotics, and veterinary APIs",
+                "End-to-end analytical validation & regulatory dossier support (DMF / CEP)",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="w-0.5 h-4 bg-[#00BEDB] mt-0.5 shrink-0" />
+                  <span className="w-0.5 h-4 bg-[#00BEDB] mt-1 shrink-0" />
                   <span className="text-sm text-gray-300">{item}</span>
                 </div>
               ))}
@@ -58,13 +55,29 @@ export default function CustomManufacturing() {
             </div>
           </div>
 
-          {/* Right side — simple stat block */}
+          {/* Right side — Platform Scalability Blocks */}
           <div className="grid grid-cols-2 gap-px bg-white/10">
             {[
-              { value: "340 kL+", label: "Available Capacity", desc: "Flexible bioreactor allocation for custom projects." },
-              { value: "cGMP", label: "Fully Compliant", desc: "WHO-cGMP Schedule M facility for every batch." },
-              { value: "EP/BP/USP", label: "Pharmacopeial", desc: "International grade APIs with full documentation." },
-              { value: "100%", label: "ZLD Facility", desc: "Zero liquid discharge — sustainable manufacturing." },
+              {
+                value: "Modular",
+                label: "Horizontal Scaling",
+                desc: "Transferable fermentation tech across high-value APIs.",
+              },
+              {
+                value: "CDMO & FDF",
+                label: "Forward Integration",
+                desc: "Supports finished dosages and contract manufacturing globally.",
+              },
+              {
+                value: "Multi-Segment",
+                label: "Adjacent Expansion",
+                desc: "Extendable to enzymes, probiotics, and veterinary APIs.",
+              },
+              {
+                value: "350 KL · ZLD",
+                label: "cGMP Infrastructure",
+                desc: "6 × 33 KL fermenters (3 ready) with 100% Zero Liquid Discharge.",
+              },
             ].map((item, i) => (
               <div key={i} className="bg-[#001a24] border border-white/5 p-7">
                 <div className="text-2xl font-black text-white mb-1">{item.value}</div>

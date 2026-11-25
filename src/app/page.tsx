@@ -3,6 +3,8 @@ import Hero from '@/components/Hero';
 import MetricRibbon from '@/components/MetricRibbon';
 import AboutIntro from '@/components/AboutIntro';
 import Features from '@/components/Features';
+import IndustryEvolutionSection from '@/components/IndustryEvolutionSection';
+import InfrastructureMarketSection from '@/components/InfrastructureMarketSection';
 import TrustSection from '@/components/TrustSection';
 import Partners from '@/components/Partners';
 import ProductsIntro from '@/components/ProductsIntro';
@@ -12,7 +14,7 @@ import Footer from '@/components/Footer';
 export const metadata = {
   title: "FERMAC BIO | World-Class Fermentation API Manufacturer",
   description:
-    "India's dedicated primary manufacturer of microbial fermentation Active Pharmaceutical Ingredients: Fusidic Acid, Sodium Fusidate, Daptomycin, and Teicoplanin. 340 kL+ biomanufacturing campus at Shivampet, Medak with WHO-cGMP compliance.",
+    "Focused on premium-grade fermentation-based Active Pharmaceutical Ingredients: Fusidic Acid, Sodium Fusidate, Daptomycin, and Teicoplanin (FB-03). 25,000 sq. m. integrated biomanufacturing campus near Hyderabad in Medak District.",
 };
 
 export default function Home() {
@@ -20,33 +22,37 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navigation />
       <main>
-        {/* 1. Fleming Labs-inspired Trust & Brand Showcase Hero */}
+        {/* 1. Brand Showcase Hero */}
         <Hero />
 
-        {/* 2. Key Scale & Impact Ribbon */}
+        {/* 2. Key Scale & Infrastructure Ribbon */}
         <MetricRibbon />
 
-        {/* 3. Combined About Us: Corporate Heritage, Founders, Mission & Governance */}
+        {/* 3. Company Overview, Purpose & Why FERMAC Bio */}
         <AboutIntro isStandalonePage={false} />
 
-        {/* 4. Core Scientific & Manufacturing Pillars */}
+        {/* 4. Key Drivers of FERMAC Bio */}
         <Features />
 
-        {/* 5. Trust & Pharmacopeial Quality Accreditations */}
+        {/* 5. Industry Evolution & Why Fermentation */}
+        <IndustryEvolutionSection />
+
+        {/* 6. Manufacturing Infrastructure & Market Opportunity */}
+        <InfrastructureMarketSection showInfrastructureLink={true} />
+
+        {/* 7. Strategic Advantage & Supply Reliability */}
         <TrustSection />
 
-        {/* 6. Strategic Alliances (Fleming Laboratories & Bransun Labs) */}
+        {/* 8. Strong Technology Backbone: Bransun Labs + Fleming Laboratories Limited */}
         <Partners />
 
-        {/* 7. Core API Molecule Portfolio */}
+        {/* 9. Core API Molecule Portfolio */}
         <ProductsIntro />
 
-        {/* 8. Custom Manufacturing Solutions */}
+        {/* 10. Modular Fermentation & Custom Manufacturing */}
         <CustomManufacturing />
       </main>
       <Footer />
     </div>
   );
 }
-
-
