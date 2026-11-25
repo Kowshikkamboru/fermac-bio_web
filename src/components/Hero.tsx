@@ -175,31 +175,8 @@ export default function Hero() {
         </span>
         {/* Sleek micro mouse capsule */}
         <div className="w-3.5 h-5.5 rounded-full border border-white/30 flex items-start justify-center p-0.5">
-          <div
-            className="w-0.5 h-1.5 rounded-full bg-[#00BEDB] animate-scroll-dot"
-            style={{
-              animation: "scrollDotDrop 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite",
-            }}
-          />
+          <div className="w-0.5 h-1.5 rounded-full bg-[#00BEDB] animate-scroll-dot" />
         </div>
-        <style jsx>{`
-          @keyframes scrollDotDrop {
-            0% {
-              transform: translateY(0);
-              opacity: 0;
-            }
-            20% {
-              opacity: 1;
-            }
-            70% {
-              opacity: 1;
-            }
-            100% {
-              transform: translateY(8px);
-              opacity: 0;
-            }
-          }
-        `}</style>
       </div>
     </section>
   );
