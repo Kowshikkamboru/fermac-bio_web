@@ -138,10 +138,10 @@ export default function AboutIntro({ isStandalonePage = false }: AboutIntroProps
                   </svg>
                 </Link>
                 <Link
-                  href="/directors"
+                  href="/products"
                   className="inline-flex items-center gap-2 px-7 py-3.5 border border-gray-300 hover:border-gray-500 text-[#001a24] text-sm font-semibold tracking-wide transition-all hover:bg-gray-50"
                 >
-                  Leadership &amp; Governance
+                  View API Portfolio
                 </Link>
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function AboutIntro({ isStandalonePage = false }: AboutIntroProps
           <div className="bg-gradient-to-r from-[#02111d] via-[#031d2e] to-[#02111d] rounded-3xl p-8 sm:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl border border-white/10">
             <div className="max-w-2xl space-y-3 text-center lg:text-left">
               <span className="px-3.5 py-1 rounded-full bg-cyan-950/80 border border-cyan-400/40 text-[#00BEDB] text-xs font-semibold uppercase tracking-wider inline-block">
-                Strategic Alliance &amp; Governance
+                Strategic Alliance &amp; Global Reach
               </span>
               <h3 className="text-2xl sm:text-3xl font-black tracking-tight">
                 Partnered with Fleming Laboratories Ltd
@@ -235,10 +235,10 @@ export default function AboutIntro({ isStandalonePage = false }: AboutIntroProps
             </div>
             <div className="shrink-0 flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
               <Link
-                href="/directors"
+                href="/products"
                 className="inline-flex items-center justify-center px-6 py-3.5 bg-[#00BEDB] hover:bg-[#00a8c8] text-[#001a24] text-sm font-bold tracking-wide transition-all shadow-sm"
               >
-                Meet Leadership &amp; Board →
+                Explore API Portfolio →
               </Link>
               <Link
                 href="/contact"

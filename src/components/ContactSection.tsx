@@ -173,7 +173,7 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-gray-500">Board &amp; Main Line</div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-gray-500">Corporate Office &amp; Main Line</div>
                     <div className="text-sm font-semibold text-gray-900 mt-0.5">
                       <a href="tel:+914024242999" className="hover:text-[#00BEDB] transition-colors">+91 40 2424 2999</a>
                     </div>

@@ -87,16 +87,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/directors?tab=board" className="text-gray-400 hover:text-white transition-colors inline-block">
-                  Board of Directors
-                </Link>
-              </li>
-              <li>
-                <Link href="/directors?tab=management" className="text-gray-400 hover:text-white transition-colors inline-block">
-                  Leadership Team
-                </Link>
-              </li>
-              <li>
                 <Link href="/facilities" className="text-gray-400 hover:text-white transition-colors inline-block">
                   Infrastructure
                 </Link>

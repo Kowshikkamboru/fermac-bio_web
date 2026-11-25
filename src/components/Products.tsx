@@ -18,12 +18,6 @@ interface ProductDetails {
   puritySpec: string;
   regulatoryApproval: string;
   regulatorySubtext: string;
-  directorInsight: {
-    quote: string;
-    speaker: string;
-    title: string;
-    pendingCuratedText?: string;
-  };
   suitableDosageForms: string[];
 }
 
@@ -53,14 +47,6 @@ const productList: ProductDetails[] = [
       "WHO-cGMP & Schedule M compliant manufacturing facility. Commercial validation batches approved with leading Indian formulators.",
     regulatorySubtext:
       "Drug Master File (DMF) open-part and technical dossier ready for qualification and regulatory submission.",
-    directorInsight: {
-      quote:
-        "“Our primary mission with Fusidic Acid was to eliminate India's 100% import dependency while mastering particle micronization down to sub-10 micron precision for world-leading cream and ophthalmic formulators.”",
-      speaker: "Suneel Kumar Battula",
-      title: "Founder & Managing Director",
-      pendingCuratedText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Additional DMF registration numbers, accelerated stability trial data, and customized regulatory packages will be curated here by the Board of Directors upon formal gazette publication.",
-    },
     suitableDosageForms: [
       "Topical Creams & Ointments (2% w/w)",
       "Ophthalmic Suspensions & Eye Drops (1% w/w)",
@@ -93,14 +79,6 @@ const productList: ProductDetails[] = [
       "Manufactured under WHO-cGMP standards. Complete technical data packages available for formulation partners.",
     regulatorySubtext:
       "Technical packages compiled under ICH guidelines for domestic and international regulatory filings.",
-    directorInsight: {
-      quote:
-        "“By producing both the acid and the soluble sodium salt from our single bioprocessing campus, we provide pharmaceutical partners with a complete, single-source domestic manufacturer for multi-route anti-infective formulations.”",
-      speaker: "Baby Rani Polavarapu",
-      title: "Co-Founder & Chief Scientific Officer",
-      pendingCuratedText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Additional monograph variation approvals and commercial packaging configurations are currently being finalized by the management team.",
-    },
     suitableDosageForms: [
       "Oral Film-Coated Tablets (250 mg & 500 mg)",
       "Sterile Impregnated Gauze & Tulle Dressings",
@@ -133,14 +111,6 @@ const productList: ProductDetails[] = [
       "Process scaled and validated at pilot scale. Block B commercial facility commissioning underway.",
     regulatorySubtext:
       "CEP and USFDA-aligned DMF documentation in active preparation for global regulatory submissions.",
-    directorInsight: {
-      quote:
-        "“Daptomycin represents the pinnacle of complex fermentation and chromatography purification. Our proprietary bioprocess achieves high titers and sterile-grade purity that rival any global producer.”",
-      speaker: "Suneel Kumar Battula",
-      title: "Founder & Managing Director",
-      pendingCuratedText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Pilot batch chromatographic profiles, clinical grade endotoxin validation records, and dossier submission milestones will be updated here by the directors.",
-    },
     suitableDosageForms: [
       "Sterile Lyophilized Powder for IV Infusion (350 mg & 500 mg Vials)",
       "Hospital Intensive Care Unit (ICU) Injectable Formulations",
@@ -172,14 +142,6 @@ const productList: ProductDetails[] = [
       "Laboratory process development complete; pilot scale-up scheduled for Block B.",
     regulatorySubtext:
       "Pre-formulation documentation and initial regulatory packages being prepared for regulatory agency review.",
-    directorInsight: {
-      quote:
-        "“With Teicoplanin, Fermac Bio is securing India's self-reliance in hospital critical-care anti-infectives, establishing our facility as a premier, sustainable alternative for global formulators.”",
-      speaker: "Baby Rani Polavarapu",
-      title: "Co-Founder & Chief Scientific Officer",
-      pendingCuratedText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident. Pre-formulation studies, component distribution curves, and clinical compliance data from executive leadership will be updated here.",
-    },
     suitableDosageForms: [
       "Powder for Solution for IV / IM Injection (200 mg & 400 mg Vials)",
       "Hospital Critical-Care Parenteral Solutions",
@@ -419,40 +381,6 @@ export default function Products() {
                   <span className="px-2 py-1 rounded bg-white border border-cyan-200 font-medium">✓ Schedule M Compliant</span>
                   <span className="px-2 py-1 rounded bg-white border border-cyan-200 font-medium">✓ Open-Part DMF Ready</span>
                   <span className="px-2 py-1 rounded bg-white border border-cyan-200 font-medium">✓ 100% Zero Liquid Discharge</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Director's Perspective & Pending Curated Information (Lorem Ipsum placeholder) */}
-            <div className="pt-6 bg-gradient-to-r from-gray-50 via-cyan-50/30 to-gray-50 rounded-2xl p-6 border border-gray-200/80">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#002F3C] text-[#00BEDB] flex items-center justify-center font-bold shrink-0 text-sm">
-                  {prod.directorInsight.speaker.charAt(0)}
-                </div>
-                <div className="space-y-2 flex-1">
-                  <div className="flex flex-wrap items-baseline gap-2">
-                    <span className="font-bold text-[#002F3C] text-sm">
-                      {prod.directorInsight.speaker}
-                    </span>
-                    <span className="text-xs text-gray-500 font-medium">
-                      ({prod.directorInsight.title})
-                    </span>
-                  </div>
-                  <p className="text-sm italic text-gray-700 leading-relaxed font-serif">
-                    {prod.directorInsight.quote}
-                  </p>
-
-                  {/* Placeholder for pending curated information from directors */}
-                  {prod.directorInsight.pendingCuratedText && (
-                    <div className="mt-4 pt-3 border-t border-gray-200/70">
-                      <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-1">
-                        <span>Director Curated Notes &amp; Regulatory Filing Updates:</span>
-                      </div>
-                      <p className="text-xs text-gray-500 font-mono leading-relaxed bg-white/70 p-3 rounded-lg border border-gray-200/50">
-                        {prod.directorInsight.pendingCuratedText}
-                      </p>
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
